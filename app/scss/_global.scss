@@ -1,0 +1,32 @@
+body {
+  background-color: $white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.4;
+  color: $default;
+}
+
+.wrapper {
+  display: flex;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1080px;
+  width: 100%;
+  padding: 0 40px;
+}
+
+.content-wrapper {
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  margin-top: auto;
+}
+

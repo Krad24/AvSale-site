@@ -1,0 +1,36 @@
+@import "reset";
+@import "mixins";
+@import "fonts";
+@import "vars";
+@import "libs";
+@import "global";
+
+.header {
+  padding: 27px 0;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__desc{
+    width: 200px;
+    line-height: 1.2;
+  }
+
+  &__contact {
+    width: 270px;
+    line-height: 1.2;
+  }
+
+  &__phone {
+    display: block;
+    text-align: right;
+    font-weight: 700;
+    color: #CD0000;
+    font-size: 22px;
+    margin-bottom: 2px;
+  }
+
+}
