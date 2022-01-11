@@ -54,4 +54,11 @@
       font-display: swap;
       font-style: normal;
     }
-  }
+}
+
+//для картинок на бэкграунде
+@mixin bg ($position: center, $size: cover, $repeat: no-repeat) {
+    background-position: $position;
+    background-size: $size;
+    background-repeat: $repeat;
+}

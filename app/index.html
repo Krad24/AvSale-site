@@ -4,75 +4,77 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/style.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <title>Главная страница</title>
 </head>
 
 <body class="body">
   <div class="wrapper">
-    <sidebar class="sidebar content-wrapper">
-      <nav class="menu">
-        <a class="logo" href="#">
+    <sidebar class="sidebar">
+      <nav class="sidebar__nav">
+        <a class="logo sidebar__logo" href="#">
           <img class="logo__img" src="images/icon/logo.svg" alt="логотип">
         </a>
-        <ul class="menu__items">
+        <ul class="menu sidebar__menu">
           <li class="menu__item">
-            Услуги
+            <a class="menu__link" href="#" target="_blank">Услуги</a>
           </li>
           <li class="menu__item">
-            Каталог техники
+            <a class="menu__link" href="#" target="_blank">Каталог техники</a>
           </li>
           <li class="menu__item">
-            Аукционы
+            <a class="menu__link" href="#" target="_blank">Аукционы</a>
           </li>
-          <li class="menu__item info">
-            Информация
-            <ul class="info__items">
-              <li class="info__item">
-                <a class="info__link" href="#" target="_blank">
+          <li class="menu__item">
+            <button class="menu__link menu__btn" type="button">
+              <span>Информация</span>
+            </button>
+            <ul class="menu__info">
+              <li class="menu__info-item">
+                <a class="menu__info-link" href="#" target="_blank">
                   Вопрос ответ
                 </a>
               </li>
-              <li class="info__item">
-                <a class="info__link" href="#" target="_blank">
+              <li class="menu__info-item">
+                <a class="menu__info-link" href="#" target="_blank">
                   Как читать аукционный лист
                 </a>
               </li>
-              <li class="info__item">
-                <a class="info__link" href="#" target="_blank">
+              <li class="menu__info-item">
+                <a class="menu__info-link" href="#" target="_blank">
                   Распилы, Карпилы, Конструкторы
                 </a>
               </li>
-              <li class="info__item">
-                <a class="info__link" href="#" target="_blank">
+              <li class="menu__info-item">
+                <a class="menu__info-link" href="#" target="_blank">
                   Оформление распилов/конструкторов
                 </a>
               </li>
-              <li class="info__item">
-                <a class="info__link" href="#" target="_blank">
+              <li class="menu__info-item">
+                <a class="menu__info-link" href="#" target="_blank">
                   Определение даты выпуска
                 </a>
               </li>
-              <li class="info__item">
-                <a class="info__link" href="#" target="_blank">
+              <li class="menu__info-item">
+                <a class="menu__info-link" href="#" target="_blank">
                   Расписание судов
                 </a>
               </li>
-              <li class="info__item">
-                <a class="info__link" href="#" target="_blank">
+              <li class="menu__info-item">
+                <a class="menu__info-link" href="#" target="_blank">
                   Адреса и контакты CBX
                 </a>
               </li>
             </ul>
           </li>
           <li class="menu__item">
-            О нас
+            <a class="menu__link" href="#" target="_blank">О нас</a>
           </li>
           <li class="menu__item">
-            Отзывы
+            <a class="menu__link" href="#" target="_blank">Отзывы</a>
           </li>
           <li class="menu__item">
-            Контакты
+            <a class="menu__link" href="#" target="_blank">Контакты</a>
           </li>
         </ul>
       </nav>
@@ -105,9 +107,40 @@
           </div>
         </header>
       </div>
-      <footer class="footer"></footer>
+      <footer class="footer">
+        <blockquote class="footer__blockquote">
+          © Тосэй 2021. Все права защищены
+        </blockquote>
+        <div class="footer__inner">
+          <div class="footer__info">
+            <span class="footer__text">
+              Продажа грузовой и спецтехники, легковых автомобилей, водной техники. Любая техника из Японии, США, Кореи,
+              Китая и Сингапура. Авто с аукционов.
+            </span>
+            <address class="footer__address">
+              Владивосток, ул. Фадеева, д. 47, строение 1
+            </address>
+          </div>
+          <ul class="messanger">
+            <li class="messanger__item">
+              <a class="messanger__link" href="tel:+79841981118">
+                +7 (984) 198-11-18
+              </a>
+            </li>
+            <li class="phones__item">
+              <a class="messanger__link" href="tel:+79841977778">
+                +7 (984) 197-77-78
+              </a>
+            </li>
+          </ul>
+          <a class="email" href="mailto:spec@tosei.ru">spec@tosei.ru</a>
+        </div>
+      </footer>
     </div>
   </div>
+
+  <script src="js/main.min.js"></script>
 </body>
+
 
 </html>
