@@ -1,8 +1,8 @@
 $(function(){
 
-    $('.menu__btn').on('click', function(){
-        $('.menu__btn').toggleClass('menu__btn--active');
-        $('.menu__info').toggleClass('menu__info--active')
+    $('.info__btn').on('click', () => {
+        $('.info__btn').toggleClass('info__btn--active');
+        $('.info__items').toggleClass('info__items--active')
     })
 
 })

@@ -12,8 +12,8 @@
   <div class="wrapper">
     <sidebar class="sidebar">
       <nav class="sidebar__nav">
-        <a class="logo sidebar__logo" href="#">
-          <img class="logo__img" src="images/icon/logo.svg" alt="логотип">
+        <a class="logo sidebar__logo" href="#" target="_blank">
+          <img class="logo__img" src="images/icon/logo.svg" alt="логотип" width="117" height="34">
         </a>
         <ul class="menu sidebar__menu">
           <li class="menu__item">
@@ -25,43 +25,43 @@
           <li class="menu__item">
             <a class="menu__link" href="#" target="_blank">Аукционы</a>
           </li>
-          <li class="menu__item">
-            <button class="menu__link menu__btn" type="button">
+          <li class="menu__item info">
+            <button class="menu__link info__btn" type="button">
               <span>Информация</span>
             </button>
-            <ul class="menu__info">
-              <li class="menu__info-item">
-                <a class="menu__info-link" href="#" target="_blank">
+            <ul class="info__items">
+              <li class="info__item">
+                <a class="info__link" href="#" target="_blank">
                   Вопрос ответ
                 </a>
               </li>
-              <li class="menu__info-item">
-                <a class="menu__info-link" href="#" target="_blank">
+              <li class="info__item">
+                <a class="info__link" href="#" target="_blank">
                   Как читать аукционный лист
                 </a>
               </li>
-              <li class="menu__info-item">
-                <a class="menu__info-link" href="#" target="_blank">
+              <li class="info__item">
+                <a class="info__link" href="#" target="_blank">
                   Распилы, Карпилы, Конструкторы
                 </a>
               </li>
-              <li class="menu__info-item">
-                <a class="menu__info-link" href="#" target="_blank">
+              <li class="info__item">
+                <a class="info__link" href="#" target="_blank">
                   Оформление распилов/конструкторов
                 </a>
               </li>
-              <li class="menu__info-item">
-                <a class="menu__info-link" href="#" target="_blank">
+              <li class="info__item">
+                <a class="info__link" href="#" target="_blank">
                   Определение даты выпуска
                 </a>
               </li>
-              <li class="menu__info-item">
-                <a class="menu__info-link" href="#" target="_blank">
+              <li class="info__item">
+                <a class="info__link" href="#" target="_blank">
                   Расписание судов
                 </a>
               </li>
-              <li class="menu__info-item">
-                <a class="menu__info-link" href="#" target="_blank">
+              <li class="info__item">
+                <a class="info__link" href="#" target="_blank">
                   Адреса и контакты CBX
                 </a>
               </li>
@@ -81,11 +81,11 @@
       <ul class="sidebar__social">
         <li class="sidebar__social-item">
           <a class="sidebar__social-link" target="_blank" href="https://web.whatsapp.com/"
-            style="background-image: url('images/icon/whatsapp.svg')" aria-label="ссылка на whatsapp"></a>
+            style="background-image: url('images/icon/watsapp.svg')" aria-label="ссылка на whatsapp"></a>
         </li>
         <li class="sidebar__social-item">
           <a class="sidebar__social-link" target="_blank" href="https://www.instagram.com/"
-            style="background-image: url('images/icon/instagram.svg')" aria-label="ссылка на instagram"></a>
+            style="background-image: url('images/icon/instagramm.svg')" aria-label="ссылка на instagram"></a>
         </li>
         <li class="sidebar__social-item">
           <a class="sidebar__social-link" target="_blank" href="https://www.youtube.com/"
@@ -93,47 +93,157 @@
         </li>
       </ul>
     </sidebar>
-    <div class="container">
-      <div class="content-wrapper">
+    <div class="content">
+      <div class="content__wrapper">
         <header class="header">
-          <div class="header__inner">
-            <span class="header__desc">
-              Автомобили из японии с доставокй по всей России
-            </span>
-            <div class="header__contact">
-              <a class="header__phone" href="tel:88002507807">8 800 250-78-07</a>
-              <span class="header__text">Бесплатный звонок по всей России</span>
+          <div class="container">
+            <div class="header__inner">
+              <h1 class="header__desc">
+                Автомобили из японии c </br>доставкой по всей России
+              </h1>
+              <div class="header__contact">
+                <a class="header__phone" href="tel:88002507807">8 800 250-78-07</a>
+                <span class="header__text">Бесплатный звонок по всей России</span>
+              </div>
             </div>
           </div>
         </header>
+        <section class="filtration" style="background-image: url('images/bg/slogan.jpg');">
+          <div class="container">
+            <h2 class="filtration__slogan">
+              Доставим любую технику из </br> Японии за 3 недели
+            </h2>
+            <div class="search">
+              <form class="search__form" action="">
+                <div class="search__top">
+                  <label class="search__lable">
+                    <input class="search__input" type="checkbox">
+                    <span class="search__checkbox"></span>
+                    Полная пошлина
+                  </label>
+                  <label class="search__lable">
+                    <input class="search__input" type="checkbox">
+                    <span class="search__checkbox"></span>
+                    Распил или конструктор
+                  </label>
+                </div>
+                <div class="search__inner">
+                  <ul class="search__filters">
+                    <li class="search__filter">
+                      <label class="search__filter-lable">
+                        Тип техники
+                        <select class="search__select" name="type">
+                          <option value="" selected>Не выбрано</option>
+                          <option value="">Седан</option>
+                          <option value="">Внедорожник</option>
+                          <option value="">Микроавтобус</option>
+                          <option value="">Хэтчбек</option>
+                          <option value="">Универсал</option>
+                          <option value="">Лифтбэк</option>
+                          <option value="">Купе</option>
+                          <option value="">Кабриолет</option>
+                          <option value="">Лимузин</option>
+                          <option value="">Фургон</option>
+                          <option value="">Автобус</option>
+                        </select>
+                      </label>
+                    </li>
+                    <li class="search__filter">
+                      <label class="search__filter-lable">
+                        Производитель
+                        <select class="search__select" name="manufacturer">
+                          <option value="" selected>Не выбрано</option>
+                          <option value="">Toyota Motor Corp.</option>
+                          <option value="">Компания Honda</option>
+                          <option value="">Альянс Renault-Nissan-Mitsubishi</option>
+                        </select>
+                      </label>
+                    </li>
+                    <li class="search__filter">
+                      <label class="search__filter-lable">
+                        Марка
+                        <select class="search__select" name="mark">
+                          <option value="" selected>Не выбрано</option>
+                          <option value="">Toyota</option>
+                          <option value="">Mitsubishi</option>
+                          <option value="">Honda</option>
+                          <option value="">Mazda</option>
+                          <option value="">Suzuki</option>
+                        </select>
+                      </label>
+                    </li>
+                    <li class="search__filter">
+                      <label class="search__filter-lable">
+                        Год выпуска
+                        <div class="search__filter-inner">
+                          <select class="search__select" name="year-from">
+                            <option value="" selected>от</option>
+                            <option value="">2015</option>
+                            <option value="">2016</option>
+                            <option value="">2017</option>
+                            <option value="">2018</option>
+                            <option value="">2019</option>
+                            <option value="">2020</option>
+                            <option value="">2021</option>
+                          </select>
+                          <select class="search__select" name="year-to">
+                            <option value="" selected>до</option>
+                            <option value="">2015</option>
+                            <option value="">2016</option>
+                            <option value="">2017</option>
+                            <option value="">2018</option>
+                            <option value="">2019</option>
+                            <option value="">2020</option>
+                            <option value="">2021</option>
+                          </select>
+                        </div>
+                      </label>
+                    </li>
+                  </ul>
+                  <button class="search__btn" type="submit">Найти</button>
+                </div>
+              </form>
+              <div class="search__bottom">
+                <div class="search__result">
+                  Автомобилей в наличии:
+                  <span class="search__result-num">256</span>
+                </div>
+                <button class="search__expanded" type="button">Расширенный поиск</button>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
       <footer class="footer">
-        <blockquote class="footer__blockquote">
-          © Тосэй 2021. Все права защищены
-        </blockquote>
-        <div class="footer__inner">
-          <div class="footer__info">
-            <span class="footer__text">
-              Продажа грузовой и спецтехники, легковых автомобилей, водной техники. Любая техника из Японии, США, Кореи,
-              Китая и Сингапура. Авто с аукционов.
-            </span>
-            <address class="footer__address">
-              Владивосток, ул. Фадеева, д. 47, строение 1
-            </address>
+        <div class="container">
+          <blockquote class="footer__blockquote">
+            © Тосэй 2021. Все права защищены
+          </blockquote>
+          <div class="footer__inner">
+            <div class="footer__info">
+              <span class="footer__text">
+                Продажа грузовой и спецтехники, легковых автомобилей, водной техники. Любая техника из Японии, США,
+                Кореи,
+                Китая и Сингапура. Авто с аукционов.
+              </span>
+              <address class="footer__address">
+                Владивосток, ул. Фадеева, д. 47, строение 1
+              </address>
+            </div>
+            <ul class="messanger">
+              <li class="messanger__item">
+                <a class="messanger__link" href="tel:+79841981118">
+                  +7 (984) 198-11-18
+                </a>
+              </li>
+              <li class="phones__item">
+                <a class="messanger__link" href="tel:+79841977778">
+                  +7 (984) 197-77-78
+                </a>
+              </li>
+            </ul>
+            <a class="email" href="mailto:spec@tosei.ru">spec@tosei.ru</a>
           </div>
-          <ul class="messanger">
-            <li class="messanger__item">
-              <a class="messanger__link" href="tel:+79841981118">
-                +7 (984) 198-11-18
-              </a>
-            </li>
-            <li class="phones__item">
-              <a class="messanger__link" href="tel:+79841977778">
-                +7 (984) 197-77-78
-              </a>
-            </li>
-          </ul>
-          <a class="email" href="mailto:spec@tosei.ru">spec@tosei.ru</a>
         </div>
       </footer>
     </div>

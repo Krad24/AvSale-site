@@ -19,14 +19,16 @@ body {
   padding: 0 40px;
 }
 
-.content-wrapper {
-  min-height: 100vh;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
+.content {
+  &__wrapper {
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
 }
 
 .footer {
   margin-top: auto;
 }
-
