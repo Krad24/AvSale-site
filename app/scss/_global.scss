@@ -11,6 +11,7 @@ body {
   display: flex;
   max-width: 1280px;
   margin: 0 auto;
+  overflow-x: hidden;
 }
 
 .container {
@@ -22,11 +23,9 @@ body {
 .content {
   &__wrapper {
     min-height: 100vh;
-    overflow: hidden;
     display: flex;
     flex-direction: column;
   }
-
 }
 
 .footer {
