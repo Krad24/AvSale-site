@@ -5,27 +5,32 @@ body {
   font-size: 14px;
   line-height: 1.4;
   color: $default;
+  
 }
 
 .wrapper {
-  display: flex;
   max-width: 1280px;
+  width: 100%;
   margin: 0 auto;
   overflow-x: hidden;
 }
 
-.container {
-  max-width: 1080px;
-  width: 100%;
-  padding: 0 40px;
-}
+.main {
+  display: flex;
 
-.content {
-  &__wrapper {
+  &__content {
+    flex-grow: 1;
+  }
+
+  &__inner {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
   }
+}
+
+.section {
+  margin: 0 40px;
 }
 
 .footer {
