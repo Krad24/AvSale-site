@@ -107,10 +107,13 @@
               </div>
             </div>
           </header>
-          <section class="filtration" style="background-image: url('images/bg/slogan.jpg');">
+          <div class="filtration" style="background-image: url('images/bg/slogan.jpg');">
             <h2 class="filtration__slogan">
               Доставим любую технику из </br> Японии за 3 недели
             </h2>
+          </div>
+
+          <section class="popular section">
             <div class="search">
               <form class="search__form" action="">
                 <div class="search__top">
@@ -128,9 +131,9 @@
                 <div class="search__inner">
                   <ul class="search__filters">
                     <li class="search__filter">
-                      <h3 class="search__title">
+                      <span class="search__title">
                         Тип техники
-                      </h3>
+                      </span>
                       <select class="search__select search__select--technics" name="type">
                         <option value="" selected>Не выбрано</option>
                         <option value="">Седан</option>
@@ -147,9 +150,9 @@
                       </select>
                     </li>
                     <li class="search__filter">
-                      <h3 class="search__title">
+                      <span class="search__title">
                         Производитель
-                      </h3>
+                      </span>
                       <select class="search__select search__select--company" name="manufacturer">
                         <option value="" selected>Не выбрано</option>
                         <option value="">Toyota Motor Corp.</option>
@@ -158,9 +161,9 @@
                       </select>
                     </li>
                     <li class="search__filter">
-                      <h3 class="search__title">
+                      <span class="search__title">
                         Марка
-                      </h3>
+                      </span>
                       <select class="search__select search__select--mark" name="mark">
                         <option value="" selected>Не выбрано</option>
                         <option value="">Toyota</option>
@@ -171,9 +174,9 @@
                       </select>
                     </li>
                     <li class="search__filter">
-                      <h3 class="search__title">
+                      <span class="search__title">
                         Год выпуска
-                      </h3>
+                      </span>
                       <div class="search__filter-inner">
                         <select class="search__select search__select--from" name="year-from">
                           <option value="" selected>от</option>
@@ -209,7 +212,145 @@
                 <button class="search__expanded" type="button">Расширенный поиск</button>
               </div>
             </div>
+            <h2 class="popular__title title">Популярные автомобили</h2>
+            <ul class="popular__filter">
+              <li class="popular__item">
+                <button class="popular__btn" type="button" data-filter="all">Любые</button>
+              </li>
+              <li class="popular__item">
+                <button class="popular__btn" type="button" data-filter=".status-in">В наличии</button>
+              </li>
+              <li class="popular__item">
+                <button class="popular__btn" type="button" data-filter=".status-order">Под заказ</button>
+              </li>
+            </ul>
+            <ul class="catalog">
+              <li class="catalog__item mix status-in">
+                <article class="catalog__article">
+                  <img class="catalog__img" src="../images/cars/honda-fit.jpg" alt="хонда фит" width="226" height="148">
+                  <div class="catalog__content">
+                    <a class="catalog__link" href="#">
+                      <h3 class="catalog__name">Honda Fit</h3>
+                    </a>
+                    <div class="catalog__info">
+                      <div class="catalog__inner">
+                        <div class="catalog__left">
+                          <p><span>Объем двигателя</span>1,2 л.с.</p>
+                          <p><span>Год</span>2015 г.</p>
+                          <p><span>Пробег</span>34 000 км</p>
+                          <p>Под полную пошлину</p>
+                        </div>
+                        <div class="catalog__right">
+                          <p><span>Привод</span>Задний</p>
+                          <p><span>КПП</span>Автомат</p>
+                        </div>
+                      </div>
+                      <div class="catalog__price">
+                        <span class="catalog__desc">Стоимость во Владивостоке</span>
+                        <span class="catalog__num">630 000<span>₽</span></span>
+                        <span class="catalog__status catalog__status--in">В наличии</span>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </li>
+              <li class="catalog__item mix status-order">
+                <article class="catalog__article">
+                  <img class="catalog__img" src="../images/cars/bmv-x5.jpg" alt="БМВ Х5" width="226" height="148">
+                  <div class="catalog__content">
+                    <a class="catalog__link" href="#">
+                      <h3 class="catalog__name">BMW - X5 2005</h3>
+                    </a>
+                    <div class="catalog__info">
+                      <div class="catalog__inner">
+                        <div class="catalog__left">
+                          <p><span>Объем двигателя</span>230 л.с.</p>
+                          <p><span>Год</span>2005 г.</p>
+                          <p><span>Пробег</span>110 000 км</p>
+                          <p>Под полную пошлину</p>
+                        </div>
+                        <div class="catalog__right">
+                          <p><span>Привод</span>Полный</p>
+                          <p><span>КПП</span>Автомат</p>
+                        </div>
+                      </div>
+                      <div class="catalog__price">
+                        <span class="catalog__desc">Стоимость в Японии</span>
+                        <span class="catalog__num">275 000<span>₽</span></span>
+                        <span class="catalog__status catalog__status--order">Под заказ</span>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </li>
+              <li class="catalog__item mix status-in">
+                <article class="catalog__article">
+                  <img class="catalog__img" src="../images/cars/toyota-prius.jpg" alt="тойота приус" width="226"
+                    height="148">
+                  <div class="catalog__content">
+                    <a class="catalog__link" href="#">
+                      <h3 class="catalog__name">Toyota Prius</h3>
+                    </a>
+                    <div class="catalog__info">
+                      <div class="catalog__inner">
+                        <div class="catalog__left">
+                          <p><span>Объем двигателя</span>109 л.с.</p>
+                          <p><span>Год</span>2009 г.</p>
+                          <p><span>Пробег</span>57 000 км</p>
+                          <p>Под полную пошлину</p>
+                        </div>
+                        <div class="catalog__right">
+                          <p><span>Привод</span>Передний</p>
+                          <p><span>КПП</span>Автомат</p>
+                        </div>
+                      </div>
+                      <div class="catalog__price">
+                        <span class="catalog__desc">Стоимость в Японии</span>
+                        <span class="catalog__num">310 000<span>₽</span></span>
+                        <span class="catalog__status catalog__status--in">В наличии</span>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </li>
+            </ul>
+            <button class="button" type="button">Показать ещё</button>
           </section>
+
+          <section class="benefits section">
+            <h2 class="benefits__title title">Наши преимущества</h2>
+            <ul class="benefits__items">
+              <li class="benefits__item" style="background-image: url('../images/icon/earth.svg');">
+                <h3 class="benefits__desc">20 лет на рынке</h3>
+                <div class="benefits__text">
+                  <p>Мы транспортируем авто в порт Японии, грузим на судно и доставляем во Владивосток, где проходит
+                    таможенное оформление</p>
+                </div>
+              </li>
+              <li class="benefits__item" style="background-image: url('../images/icon/earth.svg');">
+                <h3 class="benefits__desc">Доставка по РФ</h3>
+                <div class="benefits__text">
+                  <p>Мы транспортируем авто в порт Японии, грузим на судно и доставляем во Владивосток, где проходит
+                    таможенное оформление</p>
+                </div>
+              </li>
+              <li class="benefits__item" style="background-image: url('../images/icon/earth.svg');">
+                <h3 class="benefits__desc">Персональный менеджер</h3>
+                <div class="benefits__text">
+                  <p>Мы транспортируем авто в порт Японии, грузим на судно и доставляем во Владивосток, где проходит
+                    таможенное оформление</p>
+                </div>
+              </li>
+              <li class="benefits__item" style="background-image: url('../images/icon/earth.svg');">
+                <h3 class="benefits__desc">Собственное представительство в Японии</h3>
+                <div class="benefits__text">
+                  <p>Мы транспортируем авто в порт Японии, грузим на судно и доставляем во Владивосток, где проходит
+                    таможенное оформление</p>
+                </div>
+              </li>
+            </ul>
+          </section>
+
         </div>
         <footer class="footer section">
           <blockquote class="footer__blockquote">

@@ -1,4 +1,4 @@
-$(function(){
+$(function () {
 
     // sidebar
 
@@ -10,6 +10,9 @@ $(function(){
     //search form
 
     $('.search__select').styler();
+
+
+    var mixer = mixitup('.catalog');
 
 
 
