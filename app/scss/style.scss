@@ -576,7 +576,7 @@
       @include pseudo;
 
     }
-    
+
     &:not(:last-child) {
       margin-right: 55px;
     }
@@ -596,6 +596,91 @@
     color: $gray;
   }
 }
+
+.reviews {
+  padding-bottom: 30px;
+
+  &__title {
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+
+  &__video {
+    width: 200px;
+    height: 135px;
+    display: block;
+    @include bg;
+    position: relative;
+    margin-bottom: 16px;
+
+
+    &:hover {
+      &::after, &::before {
+        transform: scale(1.5);
+      }
+    }
+
+    &:active {
+      &::after, &::before {
+        transform: scale(0.7);
+      }
+    }
+
+    &::after, &::before {
+      @include pseudo;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      margin: auto;
+      transition: all 0.5s;
+    }
+
+    &::after {
+      width: 25px;
+      height: 18px;
+      background-image: url('../images/icon/youtube-review.svg');
+      @include bg;
+    }
+
+    &::before {
+      width: 36px;
+      height: 29px;
+      background-color: $white;
+      backdrop-filter: blur(4px);
+      border-radius: 6px;
+    }
+  }
+
+  &__stars {
+    margin-bottom: 4px;
+
+    &.jq-ry-container {
+      padding: 0;
+    }
+  }
+
+  &__link {
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  &__name {
+    font-weight: 700;
+  }
+
+  &__desc {
+    line-height: 1.4;
+    color: $gray;
+  }
+}
+
 
 .footer {
   padding: 35px 0;
