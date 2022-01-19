@@ -558,7 +558,7 @@
   }
 }
 
-.info {
+.info-list {
   display: flex;
   justify-content: space-between;
 
@@ -690,9 +690,12 @@
     display: flex;
   }
 
-  &__img {
-    object-fit: cover;
+  &__left {
+    max-width: 371px;
+    width: 100%;
+    flex-shrink: 0;
     position: relative;
+    margin-right: 40px;
 
     &::after {
       @include pseudo;
@@ -704,8 +707,28 @@
     }
   }
 
+  &__img {
+    object-fit: cover;
+  }
+
   &__title {
     margin: 30px;
+  }
+
+  &__info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 55px;
+  }
+
+  &__item {
+    width: 160px;
+
+    &:not(:last-child){
+      margin-right: 0;
+    }
+
+    
   }
 }
 
