@@ -491,6 +491,14 @@
     font-weight: 700;
     font-size: 22px;
     margin-bottom: 8px;
+
+    &:hover {
+      color: $red;
+    }
+
+    &:focus, &:active {
+      color: #f7a4a4;
+    }
   }
 
   &__info {
