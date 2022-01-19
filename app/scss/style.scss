@@ -238,7 +238,7 @@
     position: absolute;
     padding-left: 26px;
 
-    &:checked + .search__checkbox {
+    &:checked+.search__checkbox {
       background-image: url("../images/icon/tick.svg");
       @include bg(center, 12px);
     }
@@ -620,6 +620,7 @@
     margin-bottom: 16px;
 
     &:hover {
+
       &::after,
       &::before {
         transform: scale(1.5);
@@ -627,6 +628,7 @@
     }
 
     &:active {
+
       &::after,
       &::before {
         transform: scale(0.7);
@@ -703,7 +705,7 @@
       right: 0;
       bottom: 0;
       top: 0;
-      background: linear-gradient(180deg, rgba($default, 0.48), rgba($white, 0.99));
+      background: linear-gradient(180deg, rgba($default, 0) 48.41%, $white 99.11%);
     }
   }
 
@@ -724,11 +726,109 @@
   &__item {
     width: 160px;
 
-    &:not(:last-child){
+    &:not(:last-child) {
       margin-right: 0;
     }
 
-    
+    &--btn {
+      border: 1px dashed $red;
+      border-radius: 9px;
+      padding-top: 0;
+
+      &:hover {
+        background-color: $red;
+        color: $white;
+
+        .purchase__icon {
+          fill: #FFA5A5;
+        }
+      }
+    }
+  }
+
+  &__text {
+    margin-top: 0;
+  }
+
+  &__link {
+    text-align: center;
+    padding-top: 65px;
+    height: 100%;
+  }
+
+  &__desc {
+    font-size: 16px;
+    line-height: 1.2;
+
+    &--btn {
+      padding: 0 20px;
+    }
+  }
+
+  &__icon {
+    width: 29px;
+    height: 21px;
+    fill: #C7CAD1;
+  }
+}
+
+.overviews {
+  padding-bottom: 47px;
+
+  &__title {
+    margin-bottom: 25px;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 35px;
+  }
+
+  &__item {
+    max-width: 308px;
+    width: 100%;
+  }
+}
+
+.overview {
+  &__img {
+    object-fit: cover;
+    margin-bottom: 12px;
+  }
+
+  &__title {
+    margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  &__box {
+    display: flex;
+  }
+
+  &__text {
+    font-size: 12px;
+    line-height: 1.3;
+    color: $gray;
+
+    &:not(:last-child){
+      padding-right: 16px;
+      margin-right: 12px;
+      position: relative;
+
+      &::after{
+        @include pseudo;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 4px;
+        height: 4px;
+        background-color: $gray;
+        border-radius: 50%;
+        margin: auto 0;
+      }
+    }
   }
 }
 
