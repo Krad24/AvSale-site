@@ -1,0 +1,49 @@
+.overview {
+  &__img {
+    object-fit: cover;
+    margin-bottom: 12px;
+
+    @include r($xl) {
+      width: 70%;
+      height: auto;
+    }
+
+    @include r($sm) {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  &__box {
+    display: flex;
+  }
+
+  &__text {
+    font-size: 12px;
+    line-height: 1.3;
+    color: $gray;
+
+    &:not(:last-child) {
+      padding-right: 16px;
+      margin-right: 12px;
+      position: relative;
+
+      &::after {
+        @include pseudo;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 4px;
+        height: 4px;
+        background-color: $gray;
+        border-radius: 50%;
+        margin: auto 0;
+      }
+    }
+  }
+}

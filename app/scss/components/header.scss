@@ -1,0 +1,85 @@
+.header {
+  &__nav {
+    display: none;
+
+    @include r($md) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+    }
+  }
+
+  &__burger-btn {
+    width: 40px;
+    height: 40px;
+    background-color: #1F1F1F;
+    position: relative;
+    z-index: 100;
+
+    &::after,
+    &::before {
+      @include pseudo;
+      height: 2px;
+      background-color: $white;
+      left: 11px;
+      border-radius: 4px;
+    }
+
+    &::before {
+      width: 15px;
+      top: 16px;
+    }
+
+    &::after {
+      width: 19px;
+      bottom: 16px;
+    }
+
+    &--active {
+
+      &::after,
+      &::before {
+        @include pseudo;
+        height: 2px;
+        background-color: $white;
+        left: 11px;
+        border-radius: 4px;
+        width: 18px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
+
+      &::before {
+        transform: rotate(45deg);
+      }
+
+      &::after {
+
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  &__inner {
+    padding: 27px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 40px;
+
+    @include r($lg) {
+      margin: 0 20px;
+    }
+
+    @include r($md) {
+      display: none;
+    }
+  }
+
+  &__text {
+    font-weight: 400;
+    max-width: 350px;
+  }
+}

@@ -1,0 +1,29 @@
+.reviews {
+  padding-bottom: 30px;
+
+  @include r ($sm) {
+    padding-bottom: 43px;
+  }
+
+  &__title {
+    margin-bottom: 50px;
+    text-align: center;
+
+    @include r ($lg) {
+      margin-bottom: 25px;
+    }
+
+    @include r ($sm) {
+      text-align: left;
+    }
+
+  }
+
+  &__items {
+    margin-bottom: 50px;
+
+    @include r ($lg) {
+      margin-bottom: 30px;
+    }
+  }
+}

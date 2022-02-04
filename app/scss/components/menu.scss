@@ -1,0 +1,116 @@
+.menu {
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__link {
+    padding: 8px 25px;
+    display: block;
+    font-weight: 600;
+    font-size: 16px;
+    position: relative;
+    transition: all 0.5s;
+
+    &::before {
+      @include pseudo;
+      width: 3px;
+      height: 100%;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      background-color: transparent;
+      transition: all 0.5s;
+    }
+
+    &:hover {
+      color: #858594;
+
+      &::before {
+        background-color: $red;
+      }
+    }
+
+    &:focus,
+    &:active {
+      &::before {
+        background-color: $gray;
+      }
+    }
+  }
+
+  &__info {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__info-btn {
+    width: 100%;
+    background-color: #f7f7f9;
+    z-index: 2;
+    position: relative;
+    display: block;
+    text-align: left;
+
+    &::after {
+      @include pseudo;
+      width: 10px;
+      height: 6px;
+      top: 0;
+      bottom: 0;
+      right: 36px;
+      background-image: url("../images/icon/arrow.svg");
+      @include bg;
+      margin: auto 0;
+      transition: all 0.5s;
+
+    }
+
+    &.menu__info-btn {
+      &--active {
+        span {
+          &::after {
+            transform: rotate(-180deg);
+          }
+        }
+      }
+    }
+  }
+
+  &__info-items {
+    padding: 12px 25px;
+    position: absolute;
+    transform: translateY(-150%);
+    opacity: 0;
+    transition: all 0.5s;
+
+    &.menu__info-items {
+      &--active {
+        opacity: 1;
+        position: relative;
+        transform: translateY(0);
+      }
+    }
+  }
+
+  &__info-item {
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__info-link {
+    display: block;
+    transition: all 0.5s;
+
+    &:hover {
+      color: $red;
+    }
+
+    &:focus,
+    &:active {
+      color: rgb(247, 164, 164);
+    }
+  }
+}

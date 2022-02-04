@@ -1,0 +1,91 @@
+.contact {
+  &__address {
+    display: block;
+    font-size: 18px;
+    line-height: 1.7;
+    color: #323232;
+    margin-bottom: 15px;
+  }
+
+  &__box {
+    display: flex;
+
+    @include r($lg) {
+      display: block;
+    }
+  }
+
+  &__list {
+    max-width: 405px;
+    width: 100%;
+    margin-right: 70px;
+
+    @include r($lg) {
+      max-width: 100%;
+      margin: 0 0 16px 0;
+    }
+  }
+
+  &__item {
+    padding-left: 28px;
+    position: relative;
+    line-height: 1.9;
+    color: $gray;
+
+    &::before {
+      @include pseudo;
+      background-image: url('../images/icon/phone-line.svg');
+      @include bg;
+      width: 20px;
+      height: 20px;
+      left: 0;
+      top: 7px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+
+    @include r($md) {
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  &__phone {
+    color: $red;
+
+    @include r($md) {
+      padding: 11px 0 11px 0;
+      font-size: 18px;
+    }
+  }
+
+  &__desc {
+    padding-left: 9px;
+    margin-left: 5px;
+    position: relative;
+
+    &::before {
+      @include pseudo;
+      width: 4px;
+      height: 1px;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto 0;
+      background-color: #8b8b8b;
+    }
+
+    @include r($sm) {
+      display: block;
+      padding: 0;
+      margin: -7px 0 0 0;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+}

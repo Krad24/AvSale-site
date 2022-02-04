@@ -1,0 +1,21 @@
+.popular {
+  position: relative;
+  margin-bottom: 70px;
+
+  @include r($sm) {
+    margin-bottom: 32px;
+  }
+
+  &__title {
+    padding: 0 13px;
+    margin-bottom: 16px;
+
+    @include r($sm) {
+      padding: 0;
+    }
+  }
+
+  &__catalog {
+    margin-bottom: 8px;
+  }
+}

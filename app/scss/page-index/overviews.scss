@@ -1,0 +1,54 @@
+.overviews {
+  padding-bottom: 47px;
+
+  @include r($xl) {
+    padding-bottom: 34px;
+  }
+
+  &__title {
+    margin-bottom: 25px;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 35px;
+
+    @include r($xl) {
+      flex-wrap: wrap;
+    }
+
+    @include r($sm) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__item {
+    max-width: 308px;
+    width: 100%;
+
+    @include r($xxl) {
+      max-width: 290px;
+    }
+
+    @include r($xxl) {
+      max-width: 300px;
+    }
+
+    @include r($xl) {
+      max-width: 47%;
+
+      &:not(:last-child) {
+        margin: 0 15px 20px 0;
+      }
+    }
+
+    @include r($xl) {
+      max-width: 100%;
+
+      &:not(:last-child) {
+        margin: 0 0 20px 0;
+      }
+    }
+  }
+}

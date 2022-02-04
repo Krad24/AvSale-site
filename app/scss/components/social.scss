@@ -1,0 +1,14 @@
+.social {
+  padding: 0 25px;
+  display: flex;
+
+  &__item {
+    margin-right: 8px;
+  }
+
+  &__link {
+    display: block;
+    width: 32px;
+    height: 32px;
+  }
+}

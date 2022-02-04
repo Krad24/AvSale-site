@@ -1,0 +1,32 @@
+.burger {
+  position: absolute;
+  z-index: 50;
+  background-color: $white;
+  max-width: 260px;
+  width: 100%;
+  padding: 95px 0;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  overflow: scroll;
+  transform: translateY(-200%);
+  transition: all 0.5s;
+
+  &--active {
+    transform: translateY(0);
+  }
+
+  &__menu {
+    width: 100%;
+    margin-bottom: 105px;
+  }
+
+  &__phone {
+    padding: 0 20px;
+    margin-bottom: 50px;
+  }
+
+  &__num {
+    text-align: left;
+  }
+}

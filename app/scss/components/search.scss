@@ -1,0 +1,314 @@
+.search {
+  max-width: 1000px;
+  width: 100%;
+  padding: 24px;
+  background-color: $white;
+  box-shadow: 0px 9px 34px rgba(58, 68, 83, 0.24);
+  border-radius: 6px;
+  z-index: 1;
+  position: relative;
+
+  &__top {
+    display: flex;
+    margin-bottom: 24px;
+
+    @include r($sm) {
+      display: block;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__lable {
+    display: block;
+    margin: 0 32px 0 26px;
+
+    @include r($sm) {
+      margin: 0 0 24px 26px;
+    }
+  }
+
+  &__input {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    position: absolute;
+    padding-left: 26px;
+
+    &:checked+.search__checkbox {
+      background-image: url("../images/icon/tick.svg");
+      @include bg(center, 12px);
+    }
+  }
+
+  &__checkbox {
+    margin-left: -26px;
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-color: $red;
+    border-radius: 4px;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: end;
+    margin-bottom: 24px;
+
+    @include r($xxl) {
+      display: block;
+    }
+  }
+
+  &__filters {
+    display: flex;
+    margin-right: 16px;
+
+    @include r($xxl) {
+      margin: 0 0 24px 0;
+    }
+
+    @include r($xl) {
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 0;
+    }
+
+    @include r($sm) {
+      margin-bottom: 74px;
+    }
+  }
+
+  &__filter {
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+
+    @include r($xl) {
+      margin-bottom: 24px;
+      width: 45%;
+
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+    }
+
+    @include r($sm) {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    display: block;
+    font-weight: 400;
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+
+  &__select {
+    display: block;
+
+    .jq-selectbox select,
+    .jq-select-multiple select {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      opacity: 0;
+    }
+
+    .jq-selectbox__select {
+      background-color: #f1f1f1;
+      font-weight: 400;
+      height: 32px;
+      padding: 8px 16px;
+      border-radius: 4px;
+
+      @include r($sm) {
+        font-size: 16px;
+      }
+    }
+
+    .jq-selectbox__trigger {
+      border-left: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 24px;
+      height: 100%;
+    }
+
+    .jq-selectbox__trigger-arrow {
+      border: none;
+      width: 10px;
+      height: 6px;
+      top: 0;
+      bottom: 0;
+      margin: auto 0;
+      background-image: url("../images/icon/arrow.svg");
+      @include bg;
+      position: absolute;
+    }
+
+    .jq-selectbox__dropdown {
+      font-weight: 400;
+      position: absolute;
+      width: 100%;
+      margin: 2px 0 0;
+      border-radius: 4px;
+      background-color: #f1f1f1;
+    }
+
+    .jq-selectbox__dropdown ul {
+      max-height: 250px;
+    }
+
+    .jq-selectbox__dropdown li {
+      padding: 6px 16px;
+      white-space: pre-wrap;
+
+      &:hover {
+        color: #f7a4a4;
+      }
+    }
+
+    .jq-selectbox__dropdown .selected {
+      background-color: $red;
+      color: $white;
+    }
+
+    &--technics {
+      width: 232px;
+    }
+
+    &--company {
+      width: 184px;
+    }
+
+    &--mark {
+      width: 187px;
+    }
+
+    &--from {
+      margin-right: 6px;
+      width: 100px;
+    }
+
+    &--to {
+      width: 100px;
+    }
+
+    @include r($xl) {
+
+      &--technics,
+      &--company,
+      &--mark {
+        width: 100%;
+      }
+
+      &--from {
+        margin-right: 6px;
+        width: 50%;
+      }
+
+      &--to {
+        width: 50%;
+      }
+    }
+
+    @include r($sm) {
+
+      &--from,
+      &--to {
+        width: 100%;
+      }
+
+      &--from {
+        margin: 0 0 24px 0;
+      }
+    }
+  }
+
+  &__filter-inner {
+    display: flex;
+
+    @include r($sm) {
+      display: block;
+    }
+  }
+
+  &__btn {
+    padding: 7px 16px;
+    background-color: $red;
+    border-radius: 4px;
+    color: $white;
+
+    @include r($lg) {
+      display: block;
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    @include r($sm) {
+      width: 100%;
+      font-size: 16px;
+      padding: 16px;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include r($sm) {
+      position: relative;
+    }
+  }
+
+  &__result {
+    font-size: 13px;
+    color: #808080;
+  }
+
+  &__result-num {
+    margin-left: 6px;
+    color: $red;
+  }
+
+  &__expanded {
+    padding: 8px 40px 8px 16px;
+    border: 1px solid #cacaca;
+    border-radius: 4px;
+    position: relative;
+
+    &::after {
+      @include pseudo;
+      width: 10px;
+      height: 6px;
+      top: 0;
+      bottom: 0;
+      right: 20px;
+      background-image: url("../images/icon/arrow.svg");
+      @include bg;
+      margin: auto 0;
+      transition: all 0.5s;
+    }
+
+    @include r($sm) {
+      display: block;
+      width: 100%;
+      font-size: 16px;
+      position: absolute;
+      bottom: 115px;
+      padding: 15px 30px 15px 16px;
+
+      &::after {
+        right: 13px;
+      }
+    }
+  }
+}

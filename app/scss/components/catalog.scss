@@ -1,0 +1,163 @@
+.catalog {
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__article {
+    padding: 16px 32px 16px 16px;
+    border: 1px solid #e2e2e2;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+
+    @include r($xl) {
+      padding: 16px;
+    }
+
+    @include r($sm) {
+      display: block;
+    }
+  }
+
+  &__img {
+    margin-right: 32px;
+    object-fit: cover;
+
+    @include r($lg) {
+      margin-right: 20px;
+      width: 100%;
+      height: auto;
+    }
+
+    @include r($sm) {
+      margin: 0 0 16px 0;
+    }
+  }
+
+  &__content {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  &__name {
+    font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 8px;
+
+    &:hover {
+      color: $red;
+    }
+
+    &:focus,
+    &:active {
+      color: #f7a4a4;
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+
+    @include r($lg) {
+      display: block;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    margin-right: 50px;
+
+    @include r($xl) {
+      display: block;
+      margin-right: 20px;
+    }
+
+    @include r($lg) {
+      margin: 0 0 16px 0;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #E7E7E7;
+    }
+
+    @include r($sm) {
+      font-size: 16px;
+    }
+
+    p {
+      &:not(:last-child) {
+        margin-bottom: 8px;
+      }
+
+      @include r($sm) {
+        &:not(:last-child) {
+          margin-bottom: 12px;
+        }
+      }
+    }
+
+    span {
+      color: $gray;
+      margin-right: 6px;
+    }
+
+  }
+
+  &__left {
+    margin: 0 50px 8px 0;
+
+
+    @include r($xl) {
+      margin: 0 0 8px 0;
+    }
+
+    @include r($sm) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__price {
+    text-align: right;
+
+    @include r($xl) {
+      text-align: left;
+    }
+  }
+
+  &__desc {
+    color: $gray;
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  &__num {
+    display: block;
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 8px;
+
+    @include r($sm) {
+      font-size: 24px;
+    }
+  }
+
+  &__status {
+    display: inline-block;
+    padding: 4.5px 10px;
+    color: $white;
+    border-radius: 35px;
+
+    @include r($sm) {
+      padding: 8px 16px;
+      font-size: 13px;
+    }
+
+    &--in {
+      background-color: #73db43;
+    }
+
+    &--order {
+      background-color: #ebb428;
+    }
+  }
+}

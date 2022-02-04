@@ -48,7 +48,6 @@ const svgSprites = () => {
     .pipe(dest('app/images'))
 }
 
-
 function browsersync() {
     browserSync.init({
         server: {
@@ -79,6 +78,7 @@ function scripts() {
             'node_modules/simplebar/dist/simplebar.js',
             'node_modules/mixitup/dist/mixitup.js',
             'node_modules/rateyo/src/jquery.rateyo.js',
+            'node_modules/swiper/swiper-bundle.js',
             'app/js/main.js'
         ])
         .pipe(concat('main.min.js'))

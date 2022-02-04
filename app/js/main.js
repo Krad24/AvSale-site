@@ -1,10 +1,76 @@
 $(function () {
 
-    // sidebar
+    //swiper-reviews
 
-    $('.info__btn').on('click', () => {
-        $('.info__btn').toggleClass('info__btn--active');
-        $('.info__items').toggleClass('info__items--active')
+    const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        slidesPerView: "1.3",
+        spaceBetween: 10,
+        slidesPerGroup: 1,
+        loop: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+
+        breakpoints: {
+            375: {
+                slidesPerView: "1.7",
+                spaceBetween: 25,
+            },
+
+            480: {
+                slidesPerView: "2",
+            },
+
+            540: {
+                slidesPerView: "2.5",
+            },
+
+            680: {
+                slidesPerView: "3",
+            },
+
+            769: {
+                slidesPerView: "2.5",
+            },
+
+            900: {
+                slidesPerView: "3",
+            },
+
+            1024: {
+                slidesPerView: "3.5",
+                spaceBetween: 20,
+            },
+
+            1200: {
+                slidesPerView: "4",
+                spaceBetween: 65,
+            },
+        }
+    });
+
+    //burger
+
+    $('.header__burger-btn').on('click', () => {
+        $('.header__burger-btn').toggleClass('header__burger-btn--active');
+        $('.burger').toggleClass('burger--active');
+        $('body').toggleClass('lock');
+    });
+
+    $('body').on('click', function (e) {
+        if (e.target.className == 'body lock') {
+            $('body').removeClass('lock');
+            $('.burger').removeClass('burger--active');
+            $('.header__burger-btn').removeClass('header__burger-btn--active');
+        }
+    });
+
+    // sidemenu__bar
+-   $('.menu__info-btn').on('click', () => {
+        $('.menu__info-btn').toggleClass('menu__info-btn--active');
+        $('.menu__info-items').toggleClass('menu__info-items--active')
     })
 
     //search form
@@ -13,7 +79,7 @@ $(function () {
 
     // reviews srats
 
-    $(".reviews__stars").rateYo({
+    $(".review__stars").rateYo({
         starWidth: "16px",
         readOnly: true,
         starSvg: `<svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -21,9 +87,5 @@ $(function () {
             </svg>`,
     });
 
-
     var mixer = mixitup('.catalog');
-
-
-
 })

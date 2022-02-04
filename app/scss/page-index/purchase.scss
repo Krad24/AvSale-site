@@ -1,0 +1,148 @@
+.purchase {
+  padding-bottom: 70px;
+
+  @include r($sm) {
+    padding-bottom: 47px;
+  }
+
+  &__inner {
+    display: flex;
+  }
+
+  &__left {
+    max-width: 371px;
+    width: 100%;
+    flex-shrink: 0;
+    position: relative;
+    margin-right: 40px;
+
+    @include r($xxl) {
+      margin-right: 20px;
+    }
+
+    @include r($xl) {
+      max-width: 300px;
+    }
+
+    @include r($lg) {
+      display: none;
+    }
+
+    &::after {
+      @include pseudo;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      background: linear-gradient(180deg, rgba($default, 0) 48.41%, $white 99.11%);
+    }
+  }
+
+  &__img {
+    object-fit: cover;
+  }
+
+  &__title {
+    margin: 30px 0;
+
+    @include r($sm) {
+      margin: 0 0 32px 0;
+    }
+  }
+
+  &__info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 55px;
+
+    @include r($xxl) {
+      grid-gap: 24px;
+    }
+
+    @include r($xl) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include r($sm) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    width: 160px;
+
+    @include r($xl) {
+      width: 100%;
+    }
+
+    @include r($lg) {
+      padding: 0 0 5 60px;
+      background-size: 42px;
+
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-right: 0;
+    }
+
+    &--btn {
+      border: 1px dashed $red;
+      border-radius: 9px;
+      padding-top: 0;
+      display: flex;
+      justify-content: center;
+
+      @include r($lg) {
+        padding: 0;
+        align-items: center;
+      }
+
+      &:hover {
+        background-color: $red;
+        color: $white;
+
+        .purchase__icon {
+          fill: #FFA5A5;
+        }
+      }
+    }
+  }
+
+  &__text {
+    display: block;
+    margin-top: 0;
+  }
+
+  &__link {
+    text-align: center;
+
+    @include r($lg) {
+      display: flex;
+      padding: 16px;
+      height: auto;
+    }
+  }
+
+  &__desc {
+    font-size: 16px;
+    line-height: 1.2;
+
+    &--btn {
+      padding: 0 20px;
+
+      @include r($lg) {
+        order: 1;
+        margin: 0;
+      }
+    }
+  }
+
+  &__icon {
+    width: 29px;
+    height: 21px;
+    fill: #C7CAD1;
+  }
+}

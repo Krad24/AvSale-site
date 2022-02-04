@@ -1,0 +1,164 @@
+!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Главная страница</title>
+</head>
+
+<body class="body">
+  <div class="wrapper">
+    <div class="content">
+
+      @include('./components/sidebar.html')
+
+      <div class="content__wrap">
+        <div class="content__inner">
+
+          @include('./components/header.html')
+
+          <main class="main">
+
+            <div class="breadcrumbs section">
+              <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__item">
+                  <a class="breadcrumbs__link" href="index.html">Главная</a>
+                </li>
+                <li class="breadcrumbs__item"></a>
+                  <span class="breadcrumbs__span">Контакты</span>
+                </li>
+              </ul>
+            </div>
+
+            <section class="catalog">
+              <h1 class="section-title">Каталог техники</h1>
+
+              @include('./components/search.html')
+              
+            </section>
+            <section class="popular section">
+              
+              <h2 class="popular__title title">Популярные автомобили</h2>
+              <ul class="filter">
+                <li class="filter__item">
+                  <button class="filter__btn" type="button" data-filter="all">Любые</button>
+                </li>
+                <li class="filter__item">
+                  <button class="filter__btn" type="button" data-filter=".status-in">В наличии</button>
+                </li>
+                <li class="filter__item">
+                  <button class="filter__btn" type="button" data-filter=".status-order">Под заказ</button>
+                </li>
+              </ul>
+              <ul class="catalog popular__catalog">
+                <li class="catalog__item mix status-in">
+                  <article class="catalog__article">
+                    <img class="catalog__img" src="../images/content/cars/honda-fit.jpg" alt="хонда фит" width="226"
+                      height="148">
+                    <div class="catalog__content">
+                      <a class="catalog__link" href="#">
+                        <h3 class="catalog__name">Honda Fit</h3>
+                      </a>
+                      <div class="catalog__info">
+                        <div class="catalog__inner">
+                          <div class="catalog__left">
+                            <p><span>Объем двигателя</span>1,2 л.с.</p>
+                            <p><span>Год</span>2015 г.</p>
+                            <p><span>Пробег</span>34 000 км</p>
+                            <p>Под полную пошлину</p>
+                          </div>
+                          <div class="catalog__right">
+                            <p><span>Привод</span>Задний</p>
+                            <p><span>КПП</span>Автомат</p>
+                          </div>
+                        </div>
+                        <div class="catalog__price">
+                          <span class="catalog__desc">Стоимость во Владивостоке</span>
+                          <span class="catalog__num">630 000<span>₽</span></span>
+                          <span class="catalog__status catalog__status--in">В наличии</span>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </li>
+                <li class="catalog__item mix status-order">
+                  <article class="catalog__article">
+                    <img class="catalog__img" src="../images/content/cars/bmv-x5.jpg" alt="БМВ Х5" width="226"
+                      height="148">
+                    <div class="catalog__content">
+                      <a class="catalog__link" href="#">
+                        <h3 class="catalog__name">BMW - X5 2005</h3>
+                      </a>
+                      <div class="catalog__info">
+                        <div class="catalog__inner">
+                          <div class="catalog__left">
+                            <p><span>Объем двигателя</span>230 л.с.</p>
+                            <p><span>Год</span>2005 г.</p>
+                            <p><span>Пробег</span>110 000 км</p>
+                            <p>Под полную пошлину</p>
+                          </div>
+                          <div class="catalog__right">
+                            <p><span>Привод</span>Полный</p>
+                            <p><span>КПП</span>Автомат</p>
+                          </div>
+                        </div>
+                        <div class="catalog__price">
+                          <span class="catalog__desc">Стоимость в Японии</span>
+                          <span class="catalog__num">275 000<span>₽</span></span>
+                          <span class="catalog__status catalog__status--order">Под заказ</span>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </li>
+                <li class="catalog__item mix status-in">
+                  <article class="catalog__article">
+                    <img class="catalog__img" src="../images/content/cars/toyota-prius.jpg" alt="тойота приус"
+                      width="226" height="148">
+                    <div class="catalog__content">
+                      <a class="catalog__link" href="#">
+                        <h3 class="catalog__name">Toyota Prius</h3>
+                      </a>
+                      <div class="catalog__info">
+                        <div class="catalog__inner">
+                          <div class="catalog__left">
+                            <p><span>Объем двигателя</span>109 л.с.</p>
+                            <p><span>Год</span>2009 г.</p>
+                            <p><span>Пробег</span>57 000 км</p>
+                            <p>Под полную пошлину</p>
+                          </div>
+                          <div class="catalog__right">
+                            <p><span>Привод</span>Передний</p>
+                            <p><span>КПП</span>Автомат</p>
+                          </div>
+                        </div>
+                        <div class="catalog__price">
+                          <span class="catalog__desc">Стоимость в Японии</span>
+                          <span class="catalog__num">310 000<span>₽</span></span>
+                          <span class="catalog__status catalog__status--in">В наличии</span>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </li>
+              </ul>
+              <button class="button" type="button">Показать ещё</button>
+            </section>
+          </main>
+        </div>
+
+        @include('./components/footer.html')
+
+      </div>
+    </div>
+  </div>
+
+  <!-- <script async src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap">
+  </script> -->
+  <script src="js/main.min.js"></script>
+</body>
+
+
+</html>
