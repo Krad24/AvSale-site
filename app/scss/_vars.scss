@@ -8,3 +8,9 @@ $md: 768;
 $lg: 992;
 $xl: 1200;
 $xxl: 1300;
+
+%center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -5,12 +5,27 @@
     }
   }
 
-  &__article {
+  &__link {
     padding: 16px 32px 16px 16px;
     border: 1px solid #e2e2e2;
     border-radius: 4px;
     display: flex;
     align-items: center;
+
+    &:hover {
+      box-shadow: 0 9px 26px rgba(58, 68, 83, 0.29);
+      border-radius: 6px;
+      
+      .catalog__name{
+        color: $red;
+      }
+    }
+
+    &:active {
+      .catalog__name{
+        color: #f7a4a4;
+      }
+    }
 
     @include r($xl) {
       padding: 16px;
@@ -45,15 +60,6 @@
     font-weight: 700;
     font-size: 22px;
     margin-bottom: 8px;
-
-    &:hover {
-      color: $red;
-    }
-
-    &:focus,
-    &:active {
-      color: #f7a4a4;
-    }
   }
 
   &__info {

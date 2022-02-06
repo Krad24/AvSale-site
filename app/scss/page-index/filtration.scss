@@ -41,13 +41,8 @@
       text-align: left;
     }
   }
-
-
-  &__box {
-    margin: -110px 40px 40px 40px;
-
-    @include r($lg) {
-      margin: -110px 20px 40px 20px;
-    }
+  
+  &__search {
+    margin: -110px 0 40px 0;
   }
 }

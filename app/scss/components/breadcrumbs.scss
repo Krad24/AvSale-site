@@ -1,0 +1,48 @@
+.breadcrumbs {
+  padding: 23px 0 5px;
+  background-color: #F7F7F9;
+
+  @include r($sm){
+    padding: 15px 0 0;
+  }
+
+  &__list {
+    display: flex;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.3;
+    color: $gray;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    margin-bottom: 15px;
+
+    &:not(:last-child) {
+      padding-right: 13px;
+      margin-right: 8px;
+      position: relative;
+
+      &::after {
+        @include pseudo;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: #C4C4C4;
+      }
+    }
+  }
+
+  &__link {
+    padding: 14px 0;
+    transition: all 0.5s;
+
+    &:hover {
+      color: $red;
+    }
+  }
+}

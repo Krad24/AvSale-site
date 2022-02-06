@@ -18,4 +18,12 @@
   &__catalog {
     margin-bottom: 8px;
   }
+
+  &__filter {
+    margin-bottom: 24px;
+
+    @include r($sm){
+      margin-bottom: 12px;
+    }
+  }
 }

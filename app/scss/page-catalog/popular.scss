@@ -1,0 +1,28 @@
+.catalog-popular {
+  padding: 25px 0 80px;
+
+  @include r($sm) {
+    padding: 15px 0 60px;
+  }
+
+  &__title {
+    padding-left: 13px;
+    margin-bottom: 16px;
+  }
+
+  &__filter {
+    margin-bottom: 24px;
+
+    @include r($sm) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__list{
+    margin-bottom: 53px;
+
+    @include r($sm) {
+      margin-bottom: 40px;
+    }
+  }
+}
