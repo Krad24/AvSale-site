@@ -2,6 +2,7 @@
   padding: 35px 0;
 
   @include r($sm) {
+    border-top: 1px solid #ECECEC;
     padding: 35px 0 20px 0;
   }
 

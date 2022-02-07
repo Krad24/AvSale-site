@@ -1,17 +1,209 @@
 .product {
   padding: 20px 0 30px;
 
+  @include r($sm) {
+    padding: 20px 0 0;
+  }
+
   &__inner {
     display: flex;
     align-items: center;
     margin-bottom: 27px;
+
+    @include r($sm) {
+      display: block;
+      margin-bottom: 24px;
+    }
   }
 
   &__title {
     margin-right: 12px;
+
+    @include r($md) {
+      margin-right: 14px;
+    }
+
+    @include r($sm) {
+      margin: 0 0 8px 0;
+    }
   }
 
   &__slider {
     margin: 0 0 24px 40px;
+
+    @include r($lg) {
+      margin: 0 0 24px 20px;
+    }
+  }
+
+  &__box {
+    display: flex;
+
+    @include r($xl) {
+      display: block;
+    }
+  }
+
+  &__tabs {
+    margin-right: 20px;
+    max-width: 690px;
+    width: 100%;
+
+    @include r($xl) {
+      max-width: 100%;
+      margin: 0 0 28px 0;
+    }
+  }
+
+  &__tabs-list {
+    margin-bottom: 25px;
+
+    @include r($xl) {
+      justify-content: space-around;
+    }
+  }
+
+  &__tabs-btn {
+    @include r($lg) {
+      &:not(:last-child) {
+        margin-right: 12px;
+      }
+    }
+  }
+
+  &__content-item {
+    display: none;
+
+    &--active {
+      display: block;
+    }
+  }
+
+  &__content-characteristic {
+    column-count: 2;
+    column-gap: 20px;
+    max-width: 650px;
+    width: 100%;
+
+    @include r($xl) {
+      max-width: 100%;
+    }
+
+    @include r($sm) {
+      column-count: 1;
+    }
+
+    p {
+      word-wrap: break-word;
+      line-height: 1.4;
+
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+
+      span {
+        color: $gray;
+        margin-right: 8px;
+      }
+    }
+  }
+
+  &__content-info {
+    max-width: 610px;
+    width: 100%;
+
+    @include r($lg) {
+      max-width: 100%;
+    }
+
+    p {
+      font-weight: 400;
+      line-height: 1.4;
+
+      &:not(:last-child) {
+        margin-bottom: 26px;
+      }
+    }
+  }
+
+  &__content-overview {
+    max-width: 310px;
+    width: 100%;
+  }
+
+  &__right {
+    max-width: 270px;
+    width: 100%;
+    padding-top: 70px;
+
+    @include r($xl) {
+      max-width: 100%;
+      padding: 16px 0;
+      border-top: 1px solid #E2E2E2;
+      border-bottom: 1px solid #E2E2E2;
+    }
+
+    @include r($lg) {
+      text-align: center;
+    }
+  }
+
+  &__price {
+    margin-bottom: 32px;
+
+    @include r($sm) {
+      margin-bottom: 22px;
+    }
+  }
+
+  &__price-text {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  &__price-num {
+    display: block;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 2px;
+  }
+
+  &__price-desc {
+    display: block;
+    font-size: 12px;
+    color: $gray;
+  }
+
+  &__consultation {
+    padding: 16px 24px;
+    line-height: 1.4;
+    color: $white;
+    background-color: $red;
+    margin-bottom: 16px;
+    border-radius: 4px;
+
+    @include r($xl) {
+      margin: 0 30px 0 0;
+    }
+
+    @include r($sm) {
+      display: block;
+      margin: 0 0 22px;
+      width: 100%;
+    }
+  }
+
+  &__application {
+    padding: 14.5px 24px;
+    line-height: 1.4;
+    border: 1px solid #CACACA;
+    border-radius: 4px;
+    color: $red;
+
+    @include r($sm) {
+      display: block;
+      width: 100%;
+    }
   }
 }

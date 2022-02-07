@@ -55,7 +55,7 @@ $(function () {
 
     const product = new Swiper('.product__slider', {
         // Optional parameters
-        slidesPerView: "2.8",
+        slidesPerView: "1",
         spaceBetween: 10,
         slidesPerGroup: 1,
         loop: true,
@@ -64,42 +64,31 @@ $(function () {
             disableOnInteraction: false,
         },
 
-        // breakpoints: {
-        //     375: {
-        //         slidesPerView: "1.7",
-        //         spaceBetween: 25,
-        //     },
+        breakpoints: {
+            369: {
+                slidesPerView: "1.2",
+            },
 
-        //     480: {
-        //         slidesPerView: "2",
-        //     },
+            480: {
+                slidesPerView: "1.4",
+            },
 
-        //     540: {
-        //         slidesPerView: "2.5",
-        //     },
+            550: {
+                slidesPerView: "1.7",
+            },
 
-        //     680: {
-        //         slidesPerView: "3",
-        //     },
+            660: {
+                slidesPerView: "2",
+            },
 
-        //     769: {
-        //         slidesPerView: "2.5",
-        //     },
+            900: {
+                slidesPerView: "2.4",
+            },
 
-        //     900: {
-        //         slidesPerView: "3",
-        //     },
-
-        //     1024: {
-        //         slidesPerView: "3.5",
-        //         spaceBetween: 20,
-        //     },
-
-        //     1200: {
-        //         slidesPerView: "2.9",
-        //         spaceBetween: 10,
-        //     },
-        // }
+            1100: {
+                slidesPerView: "2.9",
+            },
+        }
     });
 
     //burger
@@ -137,6 +126,29 @@ $(function () {
             <path d="M10.1594 5.02786L8.95106 1.30902C8.65171 0.38771 7.3483 0.387701 7.04894 1.30902L5.84062 5.02786H1.93039C0.961671 5.02786 0.558885 6.26748 1.3426 6.83688L4.50604 9.13525L3.29772 12.8541C2.99837 13.7754 4.05284 14.5415 4.83656 13.9721L8 11.6738L11.1634 13.9721C11.9472 14.5415 13.0016 13.7754 12.7023 12.8541L11.494 9.13525L14.6574 6.83688C15.4411 6.26748 15.0383 5.02786 14.0696 5.02786L10.1594 5.02786Z" fill="#FFC85F" stroke="white"/>
             </svg>`,
     });
+
+    // product tabs
+
+    $('.product__tabs-btn--characteristic').on('click', () => {
+        $('.tabs__btn').removeClass('tabs__btn--active');
+        $('.product__tabs-btn--characteristic').addClass('tabs__btn--active');
+        $('.product__content-item').removeClass('product__content-item--active');
+        $('.product__content-item--characteristic').addClass('product__content-item--active');
+    });
+
+    $('.product__tabs-btn--info').on('click', () => {
+        $('.tabs__btn').removeClass('tabs__btn--active');
+        $('.product__tabs-btn--info').addClass('tabs__btn--active');
+        $('.product__content-item').removeClass('product__content-item--active');
+        $('.product__content-item--info').addClass('product__content-item--active');
+    });
+
+    $('.product__tabs-btn--video').on('click', () => {
+        $('.tabs__btn').removeClass('tabs__btn--active');
+        $('.product__tabs-btn--video').addClass('tabs__btn--active');
+        $('.product__content-item').removeClass('product__content-item--active');
+        $('.product__content-item--video').addClass('product__content-item--active');
+    })
 
     var mixer = mixitup('.catalog');
 })

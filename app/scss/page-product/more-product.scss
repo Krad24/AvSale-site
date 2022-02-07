@@ -1,6 +1,10 @@
 .more-product {
   padding: 38px 0 73px;
 
+  @include r($sm) {
+    padding: 38px 0 27px;
+  }
+
   &__title {
     margin-bottom: 24px;
   }

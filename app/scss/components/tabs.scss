@@ -1,0 +1,39 @@
+.tabs {
+  display: flex;
+  position: relative;
+
+  &::after {
+    @include pseudo;
+    border-bottom: 1px solid #E2E2E2;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 24px;
+    }
+  }
+
+  &__btn {
+    padding: 12px 4px;
+    color: $gray;
+    border-bottom: 1px solid transparent;
+    margin-top: 1px;
+
+    &--active {
+      position: relative;
+      color: $default;
+
+      &::after {
+        @include pseudo;
+        border-bottom: 1px solid $red;
+        left: 0;
+        right: 0;
+        bottom: -1px;
+        z-index: 1;
+      }
+    }
+  }
+}
