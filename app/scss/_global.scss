@@ -45,17 +45,32 @@ body {
   }
 }
 
-.section {
-  margin: 0 40px;
+.container {
+  max-width: 1080px;
+  padding: 0 40px;
+  margin: 0 auto;
 
   @include r($lg) {
-    margin: 0 20px;
+    padding: 0 20px;
   }
 }
 
 .title {
   font-weight: 700;
   font-size: 24px;
+}
+
+.head-title{
+  font-weight: 700;
+  font-size: 32px;
+
+  @include r($md){
+    font-size: 28px;
+  }
+
+  @include r($sm){
+    font-size: 26px;
+  }
 }
 
 .button {

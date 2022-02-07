@@ -1,0 +1,11 @@
+.catalog-list {
+  padding: 20px 0 40px;
+
+  @include r($sm){
+    padding: 20px 0;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+}

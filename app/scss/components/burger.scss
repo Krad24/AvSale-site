@@ -18,7 +18,7 @@
 
   &__menu {
     width: 100%;
-    margin-bottom: 105px;
+    margin-bottom: 95px;
   }
 
   &__phone {
@@ -28,5 +28,13 @@
 
   &__num {
     text-align: left;
+  }
+
+  &__social {
+    justify-content: center;
+  }
+
+  &__item {
+    margin-right: 16px;
   }
 }

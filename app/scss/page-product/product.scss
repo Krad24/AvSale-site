@@ -1,0 +1,17 @@
+.product {
+  padding: 20px 0 30px;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    margin-bottom: 27px;
+  }
+
+  &__title {
+    margin-right: 12px;
+  }
+
+  &__slider {
+    margin: 0 0 24px 40px;
+  }
+}

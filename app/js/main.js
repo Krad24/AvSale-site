@@ -2,7 +2,7 @@ $(function () {
 
     //swiper-reviews
 
-    const swiper = new Swiper('.swiper', {
+    const reviews = new Swiper('.reviews__slider', {
         // Optional parameters
         slidesPerView: "1.3",
         spaceBetween: 10,
@@ -49,6 +49,57 @@ $(function () {
                 spaceBetween: 65,
             },
         }
+    });
+
+    //swiper-product
+
+    const product = new Swiper('.product__slider', {
+        // Optional parameters
+        slidesPerView: "2.8",
+        spaceBetween: 10,
+        slidesPerGroup: 1,
+        loop: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+
+        // breakpoints: {
+        //     375: {
+        //         slidesPerView: "1.7",
+        //         spaceBetween: 25,
+        //     },
+
+        //     480: {
+        //         slidesPerView: "2",
+        //     },
+
+        //     540: {
+        //         slidesPerView: "2.5",
+        //     },
+
+        //     680: {
+        //         slidesPerView: "3",
+        //     },
+
+        //     769: {
+        //         slidesPerView: "2.5",
+        //     },
+
+        //     900: {
+        //         slidesPerView: "3",
+        //     },
+
+        //     1024: {
+        //         slidesPerView: "3.5",
+        //         spaceBetween: 20,
+        //     },
+
+        //     1200: {
+        //         slidesPerView: "2.9",
+        //         spaceBetween: 10,
+        //     },
+        // }
     });
 
     //burger
