@@ -91,6 +91,11 @@ $(function () {
         }
     });
 
+    const tabs = new Swiper('.product__tabs-slider', {
+        // Optional parameters
+        slidesPerView: "auto",
+    });
+
     //burger
 
     $('.header__burger-btn').on('click', () => {

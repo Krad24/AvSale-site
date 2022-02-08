@@ -1,5 +1,4 @@
 .tabs {
-  display: flex;
   position: relative;
 
   &::after {
@@ -11,6 +10,8 @@
   }
 
   &__item {
+    width: auto;
+
     &:not(:last-child) {
       margin-right: 24px;
     }
