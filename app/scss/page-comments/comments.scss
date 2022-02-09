@@ -1,0 +1,25 @@
+.comments {
+  padding: 20px 0 90px;
+
+  &__title {
+    margin-bottom: 13px;
+  }
+
+  &__slider {
+    margin-bottom: 32px;
+  }
+
+  &__video {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 24px 63px;
+  }
+
+  &__item {
+    display: none;
+
+    &--active {
+      display: block;
+    }
+  }
+}

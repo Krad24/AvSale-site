@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Главная страница</title>
+</head>
+
+<body class="body">
+  <div class="wrapper">
+    <div class="content">
+
+      @include('./components/sidebar.html')
+
+      <div class="content__wrap">
+        <div class="content__inner">
+
+          @include('./components/header.html')
+
+          <main class="main">
+
+            <div class="breadcrumbs">
+              <div class="container">
+                <ul class="breadcrumbs__list">
+                  <li class="breadcrumbs__item">
+                    <a class="breadcrumbs__link" href="index.html">Главная</a>
+                  </li>
+                  <li class="breadcrumbs__item"></a>
+                    <span class="breadcrumbs__span">Отзывы</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <section class="comments">
+              <div class="container">
+                <h1 class="head-title comments__title">Отзывы</h1>
+                <div class="comments__tabs">
+                  <div class="tabs comments__slider swiper">
+                    <ul class="tabs__list swiper-wrapper">
+                      <li class="tabs__item swiper-slide">
+                        <button class="tabs__btn comments__btn comments__btn--video tabs__btn--active"
+                          type="button">Видео отзывы</button>
+                      </li>
+                      <li class="tabs__item swiper-slide">
+                        <button class="tabs__btn comments__btn comments__btn--network" type="button">Отзывы в
+                          соцсетях</button>
+                      </li>
+                      <li class="tabs__item swiper-slide">
+                        <button class="tabs__btn comments__btn comments__btn--speak" type="button">О нас
+                          говорят</button>
+                      </li>
+                    </ul>
+                  </div>
+                  <ul class="comments__content">
+                    <li class="comments__item comments__item--video comments__item--active">
+                      <ul class="comments__video">
+                        <li class="comments__video-item">
+                          <article class="review">
+                            <a class="review__video" data-fancybox
+                              href="https://www.youtube.com/watch?v=o90xdggToPo&ab_channel=Max%D0%A2%D0%BE%D0%BF"
+                              style="background-image: url('../images/content/reviews/1.jpg');"></a>
+                            <div class="review__stars" data-rateyo-rating="5"></div>
+                            <a class="review__link" href="#">
+                              <h4 class="reviews__name">Генадий Сергеевич</h4>
+                            </a>
+                            <span class="review__desc">Toyota Allion</span>
+                          </article>
+                        </li>
+                        <li class="comments__video-item">
+                          <article class="review">
+                            <a class="review__video" data-fancybox
+                              href="https://www.youtube.com/watch?v=o90xdggToPo&ab_channel=Max%D0%A2%D0%BE%D0%BF"
+                              style="background-image: url('../images/content/reviews/2.jpg');"></a>
+                            <div class="review__stars" data-rateyo-rating="4"></div>
+                            <a class="review__link" href="#">
+                              <h4 class="reviews__name">Ольга Архипова</h4>
+                            </a>
+                            <span class="review__desc">Toyota Allion</span>
+                          </article>
+                        </li>
+                        <li class="comments__video-item">
+                          <article class="review">
+                            <a class="review__video" data-fancybox
+                              href="https://www.youtube.com/watch?v=o90xdggToPo&ab_channel=Max%D0%A2%D0%BE%D0%BF"
+                              style="background-image: url('../images/content/reviews/3.jpg');"></a>
+                            <div class="review__stars" data-rateyo-rating="5"></div>
+                            <a class="review__link" href="#">
+                              <h4 class="reviews__name">Николай Евгеньевич</h4>
+                            </a>
+                            <span class="review__desc">Toyota Allion</span>
+                          </article>
+                        </li>
+                        <li class="comments__video-item">
+                          <article class="review">
+                            <a class="review__video" data-fancybox
+                              href="https://www.youtube.com/watch?v=o90xdggToPo&ab_channel=Max%D0%A2%D0%BE%D0%BF"
+                              style="background-image: url('../images/content/reviews/4.jpg');"></a>
+                            <div class="review__stars" data-rateyo-rating="3"></div>
+                            <a class="review__link" href="#">
+                              <h4 class="reviews__name">Роман Юрьевич</h4>
+                            </a>
+                            <span class="review__desc">Toyota Allion</span>
+                          </article>
+                        </li>
+                        <li class="comments__video-item">
+                          <article class="review">
+                            <a class="review__video" data-fancybox
+                              href="https://www.youtube.com/watch?v=o90xdggToPo&ab_channel=Max%D0%A2%D0%BE%D0%BF"
+                              style="background-image: url('../images/content/reviews/1.jpg');"></a>
+                            <div class="review__stars" data-rateyo-rating="5"></div>
+                            <a class="review__link" href="#">
+                              <h4 class="reviews__name">Генадий Сергеевич</h4>
+                            </a>
+                            <span class="review__desc">Toyota Allion</span>
+                          </article>
+                        </li>
+                        <li class="comments__video-item">
+                          <article class="review">
+                            <a class="review__video" data-fancybox
+                              href="https://www.youtube.com/watch?v=o90xdggToPo&ab_channel=Max%D0%A2%D0%BE%D0%BF"
+                              style="background-image: url('../images/content/reviews/2.jpg');"></a>
+                            <div class="review__stars" data-rateyo-rating="4"></div>
+                            <a class="review__link" href="#">
+                              <h4 class="reviews__name">Ольга Архипова</h4>
+                            </a>
+                            <span class="review__desc">Toyota Allion</span>
+                          </article>
+                        </li>
+                        <li class="comments__video-item">
+                          <article class="review">
+                            <a class="review__video" data-fancybox
+                              href="https://www.youtube.com/watch?v=o90xdggToPo&ab_channel=Max%D0%A2%D0%BE%D0%BF"
+                              style="background-image: url('../images/content/reviews/3.jpg');"></a>
+                            <div class="review__stars" data-rateyo-rating="5"></div>
+                            <a class="review__link" href="#">
+                              <h4 class="reviews__name">Николай Евгеньевич</h4>
+                            </a>
+                            <span class="review__desc">Toyota Allion</span>
+                          </article>
+                        </li>
+                        <li class="comments__video-item">
+                          <article class="review">
+                            <a class="review__video" data-fancybox
+                              href="https://www.youtube.com/watch?v=o90xdggToPo&ab_channel=Max%D0%A2%D0%BE%D0%BF"
+                              style="background-image: url('../images/content/reviews/4.jpg');"></a>
+                            <div class="review__stars" data-rateyo-rating="3"></div>
+                            <a class="review__link" href="#">
+                              <h4 class="reviews__name">Роман Юрьевич</h4>
+                            </a>
+                            <span class="review__desc">Toyota Allion</span>
+                          </article>
+                        </li>
+                        <li class="comments__video-item">
+                          <article class="review">
+                            <a class="review__video" data-fancybox
+                              href="https://www.youtube.com/watch?v=o90xdggToPo&ab_channel=Max%D0%A2%D0%BE%D0%BF"
+                              style="background-image: url('../images/content/reviews/1.jpg');"></a>
+                            <div class="review__stars" data-rateyo-rating="5"></div>
+                            <a class="review__link" href="#">
+                              <h4 class="reviews__name">Генадий Сергеевич</h4>
+                            </a>
+                            <span class="review__desc">Toyota Allion</span>
+                          </article>
+                        </li>
+                        <li class="comments__video-item">
+                          <article class="review">
+                            <a class="review__video" data-fancybox
+                              href="https://www.youtube.com/watch?v=o90xdggToPo&ab_channel=Max%D0%A2%D0%BE%D0%BF"
+                              style="background-image: url('../images/content/reviews/2.jpg');"></a>
+                            <div class="review__stars" data-rateyo-rating="4"></div>
+                            <a class="review__link" href="#">
+                              <h4 class="reviews__name">Ольга Архипова</h4>
+                            </a>
+                            <span class="review__desc">Toyota Allion</span>
+                          </article>
+                        </li>
+                        <li class="comments__video-item">
+                          <article class="review">
+                            <a class="review__video" data-fancybox
+                              href="https://www.youtube.com/watch?v=o90xdggToPo&ab_channel=Max%D0%A2%D0%BE%D0%BF"
+                              style="background-image: url('../images/content/reviews/3.jpg');"></a>
+                            <div class="review__stars" data-rateyo-rating="5"></div>
+                            <a class="review__link" href="#">
+                              <h4 class="reviews__name">Николай Евгеньевич</h4>
+                            </a>
+                            <span class="review__desc">Toyota Allion</span>
+                          </article>
+                        </li>
+                        <li class="comments__video-item">
+                          <article class="review">
+                            <a class="review__video" data-fancybox
+                              href="https://www.youtube.com/watch?v=o90xdggToPo&ab_channel=Max%D0%A2%D0%BE%D0%BF"
+                              style="background-image: url('../images/content/reviews/4.jpg');"></a>
+                            <div class="review__stars" data-rateyo-rating="3"></div>
+                            <a class="review__link" href="#">
+                              <h4 class="reviews__name">Роман Юрьевич</h4>
+                            </a>
+                            <span class="review__desc">Toyota Allion</span>
+                          </article>
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li class="comments__item comments__item--network">
+                      <ul class="comments__list">
+                        <li class="comments__list-item">
+                          <article class="comments__list-review">
+                            <div class="comments__right">
+                              <img class="comments__avatar" src="" alt="аватарка">
+                              <span class="comments__name">Анастасия Жук</span>
+                              <time class="comments__date">18 августа 2021</time>
+                            </div>
+                            <div class="comments__left">
+                              <ul class="comments__info">
+                                <li class="comments__info-item">
+                                  <span class="comments__info-desc">Оценка</span>
+                                  <div class="comments__stars" data-rateyo-rating="5"></div>
+                                </li>
+                                <li class="comments__info-item">
+                                  <span class="comments__info-desc">Достоинства</span>
+                                  Быстро, слаженно, отзывчевый коллектив
+                                </li>
+                                <li class="comments__info-item">
+                                  <span class="comments__info-desc">Недостатки</span>
+                                  Нет
+                                </li>
+                                <li class="comments__info-item">
+                                  <span class="comments__info-desc">Комментарий</span>
+                                  Без проблем подбирают авто по вашим параметрам и запросам. Отзывчивчевые и адекватные
+                                  предложения для премиум и бюджетных авто!
+                                </li>
+                              </ul>
+                            </div>
+                          </article>
+                        </li>
+                      </ul>
+
+                    </li>
+
+                    <li class="comments__item comments__item--speak">
+
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+
+          </main>
+        </div>
+
+        @include('./components/footer.html')
+
+      </div>
+    </div>
+  </div>
+
+  <!-- <script async src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap">
+  </script> -->
+  <script src="js/main.min.js"></script>
+</body>
+
+
+</html>
