@@ -55,11 +55,13 @@
     }
   }
 
-  &__tabs-list {
-    margin-bottom: 25px;
+  &__tabs-slider {
+     margin-bottom: 25px;
+  }
 
+  &__tabs-list {
     @include r($xl) {
-      justify-content: space-around;
+      // justify-content: space-around;
     }
   }
 

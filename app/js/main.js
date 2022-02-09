@@ -91,6 +91,39 @@ $(function () {
         }
     });
 
+    // let catalogSlider = null;
+    // let mediaQuerySize = 576;
+
+    // function catalogSliderInit() {
+    //     if (!catalogSlider) {
+    //         catalogSlider = new Swiper('.product__tabs-slider', {
+    //             slidesPerView: "2.3",
+    //     slidesPerGroup: 1,
+    //         });
+    //     }
+    // }
+
+    // function catalogSliderDestroy() {
+    //     if (catalogSlider) {
+    //         catalogSlider.destroy();
+    //         catalogSlider = null;
+    //     }
+    // }
+
+    // $(window).on('load resize', function () {
+    //     // Берём текущую ширину экрана
+    //     let windowWidth = $(this).innerWidth();
+
+    //     // Если ширина экрана меньше или равна mediaQuerySize(1024)
+    //     if (windowWidth <= mediaQuerySize) {
+    //         // Инициализировать слайдер если он ещё не был инициализирован
+    //         catalogSliderInit()
+    //     } else {
+    //         // Уничтожить слайдер если он был инициализирован
+    //         catalogSliderDestroy()
+    //     }
+    // })
+
     //burger
 
     $('.header__burger-btn').on('click', () => {
@@ -108,7 +141,7 @@ $(function () {
     });
 
     // sidemenu__bar
--   $('.menu__info-btn').on('click', () => {
+    -   $('.menu__info-btn').on('click', () => {
         $('.menu__info-btn').toggleClass('menu__info-btn--active');
         $('.menu__info-items').toggleClass('menu__info-items--active')
     })
