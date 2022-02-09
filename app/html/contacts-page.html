@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Главная страница</title>
+</head>
+
+<body class="body">
+  <div class="wrapper">
+    <div class="content">
+
+      @include('./components/sidebar.html')
+
+      <div class="content__wrap">
+        <div class="content__inner">
+
+          @include('./components/header.html')
+
+          <main class="main">
+
+            <div class="breadcrumbs">
+              <div class="container">
+                <ul class="breadcrumbs__list">
+                  <li class="breadcrumbs__item">
+                    <a class="breadcrumbs__link" href="index.html">Главная</a>
+                  </li>
+                  <li class="breadcrumbs__item"></a>
+                    <span class="breadcrumbs__span">Контакты</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <section class="contacts-page">
+              <div class="container">
+                <h2 class="head-title contacts-page__title">Контакты</h2>
+                <address class="contact">
+                  <span class="contact__address">Владивосток, ул. Фадеева, д. 47 строение 1</span>
+                  <div class="contact__box">
+                    <ul class="contact__list">
+                      <li class="contact__item">
+                        <a class="contact__phone">+7 (423) 208-11-18</a>
+                        <span class="contact__desc">для заказа авто</span>
+                      </li>
+                      <li class="contact__item">
+                        <a class="contact__phone">+7 (984) 197-77-78</a>
+                        <span class="contact__desc">для заказа авто и мото техники</span>
+                      </li>
+                      <li class="contact__item">
+                        <a class="contact__phone">+7 (914) 691-85-05</a>
+                        <span class="contact__desc">для заказа спецтехники</span>
+                      </li>
+                    </ul>
+                    <div class="communication">
+                      <ul class="communication__list">
+                        <li class="communication__item">
+                          <a class="communication__link" href="tel:+79841981118">
+                            +7 (984) 198-11-18
+                          </a>
+                        </li>
+                        <li class="communication__item">
+                          <a class="communication__link" href="tel:+79841977778">
+                            +7 (984) 197-77-78
+                          </a>
+                        </li>
+                      </ul>
+                      <a class="communication__email" href="mailto:spec@tosei.ru">spec@tosei.ru</a>
+                    </div>
+                  </div>
+                </address>
+              </div>
+            </section>
+
+            <section class="feedback write-us">
+              <picture class="feedback__picture">
+                <source srcset="images/bg/map-page.jpg" media="(min-width: 993px)">
+                <img class="feedback__map write-us__map" src="images/bg/map-mini-page.jpg" alt="Карта" width="1080" height="595">
+              </picture>
+              <div class="feedback__inner write-us__inner">
+                <div class="container">
+                  <form class="feedback__form">
+                    <h2 class="title feedback__title">Написать нам</h2>
+                    <label class="feedback__lable" for="name">Ваше имя</label>
+                    <input class="feedback__input" type="text" name="name" placeholder="Ввести">
+                    <label class="feedback__lable" for="phone">Контактный телефон</label>
+                    <input class="feedback__input" type="tel" name="phone" placeholder="+7">
+                    <label class="feedback__lable" for="text">Ваше сообщение</label>
+                    <textarea class="write-us__textarea" name="text"></textarea>
+                    <button class="feedback__btn" type="submit">Отправить</button>
+                  </form>
+                </div>
+              </div>
+            </section>
+
+
+          </main>
+        </div>
+
+        @include('./components/footer.html')
+
+      </div>
+    </div>
+  </div>
+
+  <!-- <script async src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap">
+  </script> -->
+  <script src="js/main.min.js"></script>
+</body>
+
+
+</html>

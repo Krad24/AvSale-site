@@ -27,7 +27,7 @@
 @import 'components/communication.scss';
 @import 'components/contact.scss';
 @import 'page-index/contacts.scss';
-@import 'page-index/feedback.scss';
+@import 'components/feedback.scss';
 @import 'components/footer.scss';
 
 @import 'components/breadcrumbs.scss';
@@ -38,4 +38,7 @@
 @import 'components/tabs.scss';
 @import 'page-product/product.scss';
 @import 'page-product/more-product.scss';
+
+@import 'page-contacts/contacts.scss';
+@import 'page-contacts/write-us.scss';
 

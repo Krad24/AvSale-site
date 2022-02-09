@@ -1,0 +1,15 @@
+.contacts-page {
+  padding: 20px 0 40px;
+
+  &__title {
+    margin-bottom: 32px;
+
+    @include r($md) {
+      margin-bottom: 24px;
+    }
+
+    @include r($sm) {
+      margin-bottom: 16px;
+    }
+  }
+}

@@ -91,38 +91,10 @@ $(function () {
         }
     });
 
-    // let catalogSlider = null;
-    // let mediaQuerySize = 576;
-
-    // function catalogSliderInit() {
-    //     if (!catalogSlider) {
-    //         catalogSlider = new Swiper('.product__tabs-slider', {
-    //             slidesPerView: "2.3",
-    //     slidesPerGroup: 1,
-    //         });
-    //     }
-    // }
-
-    // function catalogSliderDestroy() {
-    //     if (catalogSlider) {
-    //         catalogSlider.destroy();
-    //         catalogSlider = null;
-    //     }
-    // }
-
-    // $(window).on('load resize', function () {
-    //     // Берём текущую ширину экрана
-    //     let windowWidth = $(this).innerWidth();
-
-    //     // Если ширина экрана меньше или равна mediaQuerySize(1024)
-    //     if (windowWidth <= mediaQuerySize) {
-    //         // Инициализировать слайдер если он ещё не был инициализирован
-    //         catalogSliderInit()
-    //     } else {
-    //         // Уничтожить слайдер если он был инициализирован
-    //         catalogSliderDestroy()
-    //     }
-    // })
+    const tabs = new Swiper('.product__tabs-slider', {
+        // Optional parameters
+        slidesPerView: "auto",
+    });
 
     //burger
 

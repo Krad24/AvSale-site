@@ -1,0 +1,30 @@
+.write-us {
+  @include r($lg) {
+    padding: 0 0 390px 0;
+  }
+
+  &__map {
+    @include r($lg) {
+      height: 620px;
+    }
+  }
+
+  &__inner {
+    @include r($lg) {
+      top: auto;
+      bottom: 40px;
+    }
+  }
+
+  &__textarea {
+    height: 111px;
+    max-width: 100%;
+    width: 100%;
+    background-color: #f1f1f1;
+    border: none;
+    resize: none;
+    margin-bottom: 16px;
+    padding: 12px 16px;
+    border-radius: 2px;
+  }
+}
