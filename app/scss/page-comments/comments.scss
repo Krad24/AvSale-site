@@ -1,18 +1,77 @@
 .comments {
   padding: 20px 0 90px;
 
+  @include r($md) {
+    padding: 20px 0 70px;
+  }
+
+  @include r($sm) {
+    padding: 20px 0 57px;
+  }
+
   &__title {
-    margin-bottom: 13px;
+    margin-bottom: 12px;
+
+    @include r($sm) {
+      margin-bottom: 8px;
+    }
   }
 
   &__slider {
     margin-bottom: 32px;
+
+    @include r($sm) {
+      margin-bottom: 24px;
+    }
   }
 
   &__video {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 24px 63px;
+    margin-bottom: 70px;
+
+    @include r($xxl) {
+      grid-gap: 24px 35px;
+    }
+
+    @include r($xl) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 24px 35px;
+    }
+
+    @include r($lg) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include r($sm) {
+      grid-template-columns: repeat(1, 1fr);
+      margin-bottom: 50px;
+    }
+  }
+
+  &__video-item {
+    margin: 0 auto;
+  }
+
+  &__review-video {
+    @include r($lg) {
+      width: 240px;
+      height: 160px;
+    }
+
+    @include r($sm) {
+      width: 280px;
+      height: 186px;
+    }
+  }
+
+  &__list {
+    margin-bottom: 70px;
+
+    @include r($sm) {
+      margin-bottom: 50px;
+    }
   }
 
   &__item {
@@ -33,6 +92,10 @@
 
   &__list-review {
     display: flex;
+
+    @include r($sm) {
+      display: block;
+    }
   }
 
   &__right {
@@ -40,6 +103,11 @@
     width: 100%;
     text-align: center;
     margin-right: 20px;
+
+    @include r($sm) {
+      max-width: 100%;
+      margin: 0 0 20px 0;
+    }
   }
 
   &__left {
@@ -80,5 +148,82 @@
     margin-right: 6px;
     color: $default;
     font-weight: 700;
+  }
+
+  &__form {
+    padding: 20px;
+    border: 2px solid $red;
+    max-width: 500px;
+    width: 100%;
+    border-radius: 10px;
+    margin: 0 auto;
+
+    @include r($sm) {
+      padding: 20px 14px;
+    }
+  }
+
+  &__lable {
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 24px;
+
+    &--rating {
+      display: flex;
+      align-items: center;
+      margin-bottom: 24px;
+
+      @include r($sm) {
+        display: block;
+      }
+    }
+  }
+
+  &__rating {
+    margin-left: 20px;
+
+    @include r($sm) {
+      margin-left: 0;
+      padding: 10px;
+    }
+  }
+
+  &__textarea {
+    margin-top: 8px;
+    display: block;
+    width: 100%;
+    height: 120px;
+    resize: none;
+    border: none;
+    background-color: #f1f1f1;
+    padding: 16px;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.2;
+
+    @include r($sm) {
+      height: 240px;
+    }
+
+    &::placeholder {
+      font-size: 14px;
+      font-weight: 400;
+      font-style: italic;
+    }
+  }
+
+  &__form-btn {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: $red;
+    color: $white;
+    border-radius: 4px;
+
+    @include r($md) {
+      padding: 14px;
+    }
   }
 }
