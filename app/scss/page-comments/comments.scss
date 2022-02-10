@@ -22,4 +22,63 @@
       display: block;
     }
   }
+
+  &__list-item {
+    &:not(:last-child) {
+      padding-bottom: 16px;
+      margin-bottom: 24px;
+      border-bottom: 1px solid #f1f1f1;
+    }
+  }
+
+  &__list-review {
+    display: flex;
+  }
+
+  &__right {
+    max-width: 240px;
+    width: 100%;
+    text-align: center;
+    margin-right: 20px;
+  }
+
+  &__left {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  &__avatar {
+    margin: 0 auto 16px;
+    object-fit: cover;
+  }
+
+  &__name {
+    color: $red;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+
+  &__date {
+    color: $gray;
+  }
+
+  &__info-item {
+    color: $gray;
+    line-height: 1.4;
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__info-inner {
+    display: flex;
+  }
+
+  &__info-desc {
+    display: inline-block;
+    margin-right: 6px;
+    color: $default;
+    font-weight: 700;
+  }
 }
