@@ -214,12 +214,12 @@
                   <form class="search__form" action="">
                     <div class="search__top">
                       <label class="search__lable">
-                        <input class="search__input" type="checkbox" checked>
+                        <input class="search__input" type="checkbox">
                         <span class="search__checkbox"></span>
                         Полная пошлина
                       </label>
                       <label class="search__lable">
-                        <input class="search__input" type="checkbox" checked>
+                        <input class="search__input" type="checkbox">
                         <span class="search__checkbox"></span>
                         Распил или конструктор
                       </label>
@@ -230,7 +230,7 @@
                           <span class="search__title">
                             Тип техники
                           </span>
-                          <select class="search__select search__select--technics" name="type">
+                          <select class="search__select search__select--technics" name="technics">
                             <option value="" selected>Не выбрано</option>
                             <option value="">Седан</option>
                             <option value="">Внедорожник</option>
@@ -299,12 +299,89 @@
                       </ul>
                       <button class="search__btn" type="submit">Найти</button>
                     </div>
+                    <div class="search__extended">
+                      <ul class="search__extended-filters">
+                        <li class="search__filter">
+                          <span class="search__title">
+                            Привод
+                          </span>
+                          <select class="search__select search__select--gear" name="gear">
+                            <option value="" selected>Не выбрано</option>
+                            <option value="">Передний</option>
+                            <option value="">Задний</option>
+                            <option value="">4WD</option>
+                          </select>
+                        </li>
+                        <li class="search__filter">
+                          <span class="search__title">
+                            КПП
+                          </span>
+                          <select class="search__select search__select--gearbox" name="gearbox">
+                            <option value="" selected>Не выбрано</option>
+                            <option value="">Автомат</option>
+                            <option value="">Механика</option>
+                          </select>
+                        </li>
+                        <li class="search__filter">
+                          <span class="search__title">
+                            Оценка на аукционе
+                          </span>
+                          <select class="search__select search__select--grade" name="grade">
+                            <option value="" selected>Не выбрано</option>
+                            <option value="">1</option>
+                            <option value="">1.5</option>
+                            <option value="">2</option>
+                            <option value="">2.5</option>
+                            <option value="">3</option>
+                            <option value="">3.5</option>
+                            <option value="">4</option>
+                            <option value="">4.5</option>
+                            <option value="">5</option>
+                          </select>
+                        </li>
+                        <li class="search__filter">
+                          <span class="search__title">
+                            Цвет
+                          </span>
+                          <select class="search__select search__select--color" name="color">
+                            <option value="" selected>Не выбрано</option>
+                            <option value=""><span class="search__color search__color--red"></span>Красный</option>
+                            <option value=""><span class="search__color search__color--green"></span>Зеленый</option>
+                            <option value=""><span class="search__color search__color--blue"></span>Синий</option>
+                            <option value=""><span class="search__color search__color--black"></span>Чёрный</option>
+                            <option value=""><span class="search__color search__color--yellow"></span>Желтый</option>
+                            <option value=""><span class="search__color search__color--gray"></span>Серый</option>
+                            <option value=""><span class="search__color search__color--white"></span>Белый</option>
+                            <option value=""><span class="search__color search__color--black-red"></span>Черно-красный
+                            </option>
+                            <option value=""><span class="search__color search__color--chameleon"></span>Хамелеон
+                            </option>
+                          </select>
+                        </li>
+                      </ul>
+                      <div class="search__extended-box">
+                        <div class="range-slider">
+                          <input type="text" class="js-range-slider" value="" />
+                        </div>
+                        <div class="extra-controls">
+                          <input type="text" class="js-input-from" value="0" />
+                          <input type="text" class="js-input-to" value="0" />
+                        </div>
+                        <div class="range-slider">
+                          <input type="text" class="js-range-slider" value="" />
+                        </div>
+                        <div class="extra-controls">
+                          <input type="text" class="js-input-from" value="0" />
+                          <input type="text" class="js-input-to" value="0" />
+                        </div>
+                      </div>
+                    </div>
                     <div class="search__bottom">
                       <div class="search__result">
                         Автомобилей в наличии:
                         <span class="search__result-num">256</span>
                       </div>
-                      <button class="search__expanded" type="button">Расширенный поиск</button>
+                      <button class="search__expanded-btn" type="button">Расширенный поиск</button>
                     </div>
                   </form>
                 </div>

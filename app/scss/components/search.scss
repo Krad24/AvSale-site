@@ -259,6 +259,10 @@
     }
   }
 
+  &__extended-filters {
+    display: flex;
+  }
+
   &__bottom {
     display: flex;
     justify-content: space-between;
@@ -279,7 +283,7 @@
     color: $red;
   }
 
-  &__expanded {
+  &__expanded-btn {
     padding: 8px 40px 8px 16px;
     border: 1px solid #cacaca;
     border-radius: 4px;
