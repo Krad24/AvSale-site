@@ -222,7 +222,7 @@ $(function () {
         $('.comments__item--speak').addClass('comments__item--active');
     })
 
-// search range
+    // search range
     var $range = $(".js-range-slider"),
         $inputFrom = $(".js-input-from"),
         $inputTo = $(".js-input-to"),

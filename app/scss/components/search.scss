@@ -201,6 +201,19 @@
       width: 100px;
     }
 
+    &--gear,
+    &--gearbox {
+      width: 170px;
+    }
+
+    &--gearbox {
+      width: 170px;
+    }
+
+    &--grade {
+      width: 170px;
+    }
+
     @include r($xl) {
 
       &--technics,
@@ -229,6 +242,58 @@
       &--from {
         margin: 0 0 24px 0;
       }
+    }
+  }
+
+  &__color {
+    background-color: #f1f1f1;
+  }
+
+  &__color-item {
+    position: relative;
+    padding: 6px 16px;
+  }
+
+  &__color-lable {
+    display: block;
+    margin: 0 32px 0 26px;
+
+    @include r($sm) {
+      margin: 0 0 24px 26px;
+    }
+  }
+
+  &__color-input {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    position: absolute;
+    padding-left: 26px;
+
+    &:checked~.search__color-name {
+      color: $red;
+    }
+
+    &:checked+.search__radio {
+      width: 80%;
+      transition: all 0.5s;
+    }
+  }
+  
+  &__radio {
+    margin-left: -26px;
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 8px;
+  }
+  
+  &__filter-inner {
+    display: flex;
+  
+    @include r($sm) {
+      display: block;
     }
   }
 
