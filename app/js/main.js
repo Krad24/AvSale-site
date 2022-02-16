@@ -222,25 +222,86 @@ $(function () {
         $('.comments__item--speak').addClass('comments__item--active');
     })
 
-    // search range
-    var $range = $(".js-range-slider"),
-        $inputFrom = $(".js-input-from"),
-        $inputTo = $(".js-input-to"),
+    // search стоимость
+    var $range = $(".search__range-input--price"),
+        $inputFrom = $(".search__from-input--price"),
+        $inputTo = $(".search__to-input--price"),
         instance,
-        min = 0,
-        max = 1000,
-        from = 0,
+        min = $range.data.min,
+        max = $range.data.max,
+        from = $range.data.from,
         to = 0;
 
     $range.ionRangeSlider({
-        skin: "round",
+        skin: "modern",
         type: "double",
         min: min,
         max: max,
-        from: 200,
-        to: 800,
+        from: from,
+        to = to,
         onStart: updateInputs,
-        onChange: updateInputs
+        onChange: updateInputs,
+        onFinish: updateInputs
+    });
+    instance = $range.data("ionRangeSlider");
+
+    function updateInputs(data) {
+        from = data.from;
+        to = data.to;
+
+        $inputFrom.prop("value", from);
+        $inputTo.prop("value", to);
+    }
+
+    $inputFrom.on("input", function () {
+        var val = $(this).prop("value");
+
+        // validate
+        if (val < min) {
+            val = min;
+        } else if (val > to) {
+            val = to;
+        }
+
+        instance.update({
+            from: val
+        });
+    });
+
+    $inputTo.on("input", function () {
+        var val = $(this).prop("value");
+
+        // validate
+        if (val < from) {
+            val = from;
+        } else if (val > max) {
+            val = max;
+        }
+
+        instance.update({
+            to: val
+        });
+    });
+
+
+    // search пробег
+    var $range = $(".search__range-input--distance"),
+        $inputFrom = $(".search__from-input--distance"),
+        $inputTo = $(".search__to-input--distance"),
+        instance,
+        min = $range.data.min,
+        max = $range.data.max,
+        from = $range.data.from,
+        to = 0;
+
+    $range.ionRangeSlider({
+        skin: "modern",
+        type: "double",
+        min: min,
+        max: max,
+        from: from,
+        onStart: updateInputs,
+        onChange: updateInputs,
     });
     instance = $range.data("ionRangeSlider");
 
