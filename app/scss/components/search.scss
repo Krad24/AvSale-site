@@ -201,6 +201,22 @@
       width: 100px;
     }
 
+    &--gear, gearbox, grade {
+      width: 200px;
+    }
+
+    &--gearbox {
+      width: 170px;
+    }
+
+    &--grade {
+      width: 170px;
+    }
+
+    &--color {
+      width: 250px;
+    }
+
     @include r($xl) {
 
       &--technics,
@@ -231,6 +247,14 @@
       }
     }
   }
+  
+  &__filter-inner {
+    display: flex;
+  
+    @include r($sm) {
+      display: block;
+    }
+  }
 
   &__filter-inner {
     display: flex;
@@ -259,8 +283,70 @@
     }
   }
 
+  &__extended {
+    margin-bottom: 24px;
+    height: 0;
+    opacity: 0;
+    position: absolute;
+    transition: all 0.5s;
+
+    &--active {
+      opacity: 1;
+      height: auto;
+      position: relative;
+    }
+  }
+
   &__extended-filters {
     display: flex;
+    justify-content: space-around;
+    margin-bottom: 24px;
+  }
+
+  &__extended-list {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__extended-item {
+    max-width: 350px;
+    width: 100%;
+  }
+
+  &__range-slider {
+    font-weight: 400;
+    display: block;
+    font-size: 13px;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  &__controls {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__to, &__from {
+    max-width: 200px;
+    font-size: 13px;
+  }
+
+  &__to-input, &__from-input {
+    padding: 8px;
+    width: 70%;
+    background-color: #f1f1f1;
+    border-radius: 4px;
+    font-weight: 400;
+    margin-left: 10px;
+    font-size: 14px;
+  }
+
+  .irs {
+    margin-top: 10px;
+  }
+
+  .irs-grid-text {
+    font-size: 11px;
   }
 
   &__color-span {
@@ -288,7 +374,7 @@
     color: $red;
   }
 
-  &__expanded-btn {
+  &__extended-btn {
     padding: 8px 40px 8px 16px;
     border: 1px solid #cacaca;
     border-radius: 4px;
@@ -305,6 +391,16 @@
       @include bg;
       margin: auto 0;
       transition: all 0.5s;
+    }
+
+    &--active {
+      &::after {
+        transform: rotate(180deg);
+      }
+    }
+
+    &:hover {
+      color: #f7a4a4;
     }
 
     @include r($sm) {

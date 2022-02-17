@@ -222,67 +222,129 @@ $(function () {
         $('.comments__item--speak').addClass('comments__item--active');
     })
 
-// search range
-    var $range = $(".js-range-slider"),
-        $inputFrom = $(".js-input-from"),
-        $inputTo = $(".js-input-to"),
-        instance,
-        min = 0,
-        max = 1000,
-        from = 0,
-        to = 0;
+    // search extended btn 
 
-    $range.ionRangeSlider({
-        skin: "round",
-        type: "double",
-        min: min,
-        max: max,
-        from: 200,
-        to: 800,
-        onStart: updateInputs,
-        onChange: updateInputs
+    $('.search__extended-btn').on('click', ()=> {
+        $('.search__extended-btn').toggleClass('search__extended-btn--active');
+        $('.search__extended').toggleClass('search__extended--active');
     });
-    instance = $range.data("ionRangeSlider");
 
-    function updateInputs(data) {
-        from = data.from;
-        to = data.to;
+    // search стоимость
+    let $rangePrice= $(".search__range-input--price"),
+        $inputFromPrice = $(".search__from-input--price"),
+        $inputToPrice = $(".search__to-input--price"),
+        minPrice = $rangePrice.data.min,
+        maxPrice = $rangePrice.data.max,
+        fromPrice= $rangePrice.data.from;
 
-        $inputFrom.prop("value", from);
-        $inputTo.prop("value", to);
+    $rangePrice.ionRangeSlider({
+        skin: "modern",
+        type: "double",
+        grid: true,
+        min: minPrice,
+        max: maxPrice,
+        from: fromPrice,
+        onStart: updateInputsPrice,
+        onChange: updateInputsPrice,
+    });
+    instancePrice = $rangePrice.data("ionRangeSlider");
+
+    function updateInputsPrice(data) {
+        fromPrice = data.from;
+        toPrice = data.to;
+
+        $inputFromPrice.prop("value", fromPrice);
+        $inputToPrice.prop("value", toPrice);
     }
 
-    $inputFrom.on("input", function () {
+    $inputFromPrice.on("input", function () {
         var val = $(this).prop("value");
 
         // validate
-        if (val < min) {
-            val = min;
-        } else if (val > to) {
-            val = to;
+        if (val < minPrice) {
+            val = minPrice;
+        } else if (val > toPrice) {
+            val = toPrice;
         }
 
-        instance.update({
+        instancePrice.update({
             from: val
         });
     });
 
-    $inputTo.on("input", function () {
+    $inputToPrice.on("input", function () {
         var val = $(this).prop("value");
 
         // validate
-        if (val < from) {
-            val = from;
-        } else if (val > max) {
-            val = max;
+        if (val < fromPrice) {
+            val = fromPrice;
+        } else if (val > maxPrice) {
+            val = maxPrice;
         }
 
-        instance.update({
+        instancePrice.update({
+            to: val
+        });
+    });
+
+    // search пробег
+    var $rangeDistance = $(".search__range-input--distance"),
+        $inputFromDistance = $(".search__from-input--distance"),
+        $inputToDistance = $(".search__to-input--distance"),
+        minDistance = $rangeDistance.data.min,
+        maxDistance = $rangeDistance.data.max,
+        toDistance = $rangeDistance.data.to;
+
+    $rangeDistance.ionRangeSlider({
+        skin: "modern",
+        type: "double",
+        grid: true,
+        min: minDistance,
+        max: maxDistance,
+        to: toDistance,
+        onStart: updateInputsDistance,
+        onChange: updateInputsDistance,
+    });
+    instanceDistance = $rangeDistance.data("ionRangeSlider");
+
+    function updateInputsDistance(data) {
+        fromDistance = data.from;
+        toDistance = data.to;
+
+        $inputFromDistance.prop("value", fromDistance);
+        $inputToDistance.prop("value", toDistance);
+    }
+
+    $inputFromDistance.on("input", function () {
+        var val = $(this).prop("value");
+
+        // validate
+        if (val < minDistance) {
+            val = minDistance;
+        } else if (val > toDistance) {
+            val = toDistance;
+        }
+
+        instanceDistance.update({
+            from: val
+        });
+    });
+
+    $inputToDistance.on("input", function () {
+        var val = $(this).prop("value");
+
+        // validate
+        if (val < fromDistance) {
+            val = fromDistance;
+        } else if (val > maxDistance) {
+            val = maxDistance;
+        }
+
+        instanceDistance.update({
             to: val
         });
     });
 
 
-
-    var mixer = mixitup('.catalog');
+var mixer = mixitup('.catalog');
 })

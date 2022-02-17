@@ -163,39 +163,61 @@
                           </span>
                           <select class="search__select search__select--color" name="color">
                             <option value="" selected>Не выбрано</option>
-                            <option value=""><span class="search__color-span" style="background-color: red;"></span>Красный</option>
-                            <option value="" style="background-color: green;">Зеленый</option>
-                            <option value="" style="background-color: blue;">Синий</option>
-                            <option value="" style="background-color: black;">Чёрный</option>
-                            <option value="" style="background-color: yellow;">Желтый</option>
-                            <option value="" style="background-color: gray;">Серый</option>
-                            <option value="" style="background-color: white;">Белый</option>
+                            <option value="">красный</option>
+                            <option value="">зеленый</option>
+                            <option value="">желтый</option>
+                            <option value="">синий</option>
+                            <option value="">голубой</option>
+                            <option value="">оранжевый</option>
+                            <option value="">фиолетовый</option>
+                            <option value="">чёрный</option>
+                            <option value="">белый</option>
+                            <option value="">серый</option>
+                            <option value="">хамелеон</option>
                           </select>
                         </li>
                       </ul>
-                      <div class="search__extended-box">
-                        <div class="range-slider">
-                          <input type="text" class="js-range-slider" value="" />
-                        </div>
-                        <div class="extra-controls">
-                          <input type="text" class="js-input-from" value="0" />
-                          <input type="text" class="js-input-to" value="0" />
-                        </div>
-                        <div class="range-slider">
-                          <input type="text" class="js-range-slider" value="" />
-                        </div>
-                        <div class="extra-controls">
-                          <input type="text" class="js-input-from" value="0" />
-                          <input type="text" class="js-input-to" value="0" />
-                        </div>
-                      </div>
+                      <ul class="search__extended-list">
+                        <li class="search__extended-item">
+                          <lable class="search__range-slider">
+                            Оценка на аукционе
+                            <input type="text" class="search__range-input search__range-input--price" value="0" data-min="0" data-max="3500000" data-from="139700" data-postfix=" грн">
+                          </lable>
+                          <div class="search__controls">
+                            <label class="search__from">
+                              от
+                              <input type="text" class="search__from-input search__from-input--price" value="0">
+                            </label>
+                            <label class="search__to">
+                              до
+                              <input type="text" class="search__to-input search__to-input--price" value="0">
+                            </label>
+                          </div>
+                        </li>
+                        <li class="search__extended-item">
+                          <lable class="search__range-slider">
+                            Пробег
+                            <input type="text" class="search__range-input search__range-input--distance" value="0" data-min="0" data-max="500000" data-to="200000" data-postfix=" км">
+                          </lable>
+                          <div class="search__controls">
+                            <label class="search__from">
+                              от
+                              <input type="text" class="search__from-input search__from-input--distance" value="0">
+                            </label>
+                            <label class="search__to">
+                              до
+                              <input type="text" class="search__to-input search__to-input--distance" value="0">
+                            </label>
+                          </div>
+                        </li>
+                      </ul>
                     </div>
                     <div class="search__bottom">
                       <div class="search__result">
                         Автомобилей в наличии:
                         <span class="search__result-num">256</span>
                       </div>
-                      <button class="search__expanded-btn" type="button">Расширенный поиск</button>
+                      <button class="search__extended-btn" type="button">Расширенный поиск</button>
                     </div>
                   </form>
                 </div>
