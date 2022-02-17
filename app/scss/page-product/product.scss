@@ -59,6 +59,10 @@
     margin-bottom: 25px;
   }
 
+  &__content {
+    overflow-y: hidden;
+  }
+
   &__content-item {
     display: none;
 

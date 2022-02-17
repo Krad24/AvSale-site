@@ -41,12 +41,12 @@
                   <form class="search__form" action="">
                     <div class="search__top">
                       <label class="search__lable">
-                        <input class="search__input" type="checkbox" checked>
+                        <input class="search__input" type="checkbox">
                         <span class="search__checkbox"></span>
                         Полная пошлина
                       </label>
                       <label class="search__lable">
-                        <input class="search__input" type="checkbox" checked>
+                        <input class="search__input" type="checkbox">
                         <span class="search__checkbox"></span>
                         Распил или конструктор
                       </label>
@@ -57,7 +57,7 @@
                           <span class="search__title">
                             Тип техники
                           </span>
-                          <select class="search__select search__select--technics" name="type">
+                          <select class="search__select search__select--technics" name="technics">
                             <option value="" selected>Не выбрано</option>
                             <option value="">Седан</option>
                             <option value="">Внедорожник</option>
@@ -124,14 +124,109 @@
                           </div>
                         </li>
                       </ul>
+                      <button class="search__extended-btn" type="button">Расширенный поиск</button>
                       <button class="search__btn" type="submit">Найти</button>
-                    </div>
-                    <div class="search__bottom">
-                      <div class="search__result">
-                        Автомобилей в наличии:
-                        <span class="search__result-num">256</span>
+                      <div class="search__extended">
+                        <ul class="search__extended-filters">
+                          <li class="search__filter">
+                            <span class="search__title">
+                              Привод
+                            </span>
+                            <select class="search__select search__select--gear" name="gear">
+                              <option value="" selected>Не выбрано</option>
+                              <option value="">Передний</option>
+                              <option value="">Задний</option>
+                              <option value="">4WD</option>
+                            </select>
+                          </li>
+                          <li class="search__filter">
+                            <span class="search__title">
+                              КПП
+                            </span>
+                            <select class="search__select search__select--gearbox" name="gearbox">
+                              <option value="" selected>Не выбрано</option>
+                              <option value="">Автомат</option>
+                              <option value="">Механика</option>
+                            </select>
+                          </li>
+                          <li class="search__filter">
+                            <span class="search__title">
+                              Оценка на аукционе
+                            </span>
+                            <select class="search__select search__select--grade" name="grade">
+                              <option value="" selected>Не выбрано</option>
+                              <option value="">1</option>
+                              <option value="">1.5</option>
+                              <option value="">2</option>
+                              <option value="">2.5</option>
+                              <option value="">3</option>
+                              <option value="">3.5</option>
+                              <option value="">4</option>
+                              <option value="">4.5</option>
+                              <option value="">5</option>
+                            </select>
+                          </li>
+                          <li class="search__filter">
+                            <span class="search__title">
+                              Цвет
+                            </span>
+                            <select class="search__select search__select--color" name="color">
+                              <option value="" selected>Не выбрано</option>
+                              <option value="">красный</option>
+                              <option value="">зеленый</option>
+                              <option value="">желтый</option>
+                              <option value="">синий</option>
+                              <option value="">голубой</option>
+                              <option value="">оранжевый</option>
+                              <option value="">фиолетовый</option>
+                              <option value="">чёрный</option>
+                              <option value="">белый</option>
+                              <option value="">серый</option>
+                              <option value="">хамелеон</option>
+                            </select>
+                          </li>
+                        </ul>
+                        <ul class="search__extended-list">
+                          <li class="search__extended-item">
+                            <lable class="search__range-slider">
+                              Оценка на аукционе
+                              <input type="text" class="search__range-input search__range-input--price" value="0"
+                                data-min="0" data-max="3500000" data-from="139700" data-postfix=" грн" required>
+                            </lable>
+                            <div class="search__controls">
+                              <label class="search__from">
+                                от
+                                <input type="text" class="search__from-input search__from-input--price" value="0" required>
+                              </label>
+                              <label class="search__to">
+                                до
+                                <input type="text" class="search__to-input search__to-input--price" value="0" required>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="search__extended-item">
+                            <lable class="search__range-slider">
+                              Пробег
+                              <input type="text" class="search__range-input search__range-input--distance" value="0"
+                                data-min="0" data-max="500000" data-to="200000" data-postfix=" км" required>
+                            </lable>
+                            <div class="search__controls">
+                              <label class="search__from">
+                                от
+                                <input type="text" class="search__from-input search__from-input--distance" value="0" required>
+                              </label>
+                              <label class="search__to">
+                                до
+                                <input type="text" class="search__to-input search__to-input--distance" value="0" required>
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
                       </div>
-                      <button class="search__expanded" type="button">Расширенный поиск</button>
+                    </div>
+                    <div class="search__result">
+                      Автомобилей в наличии:
+                      <span class="search__result-num">256</span>
                     </div>
                   </form>
                 </div>
