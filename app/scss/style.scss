@@ -5,6 +5,7 @@
 @import "libs";
 @import "global";
 
+@import 'components/logo.scss';
 @import 'components/sidebar.scss';
 @import 'components/social.scss';
 @import 'components/menu.scss';
@@ -43,4 +44,15 @@
 @import 'page-contacts/write-us.scss';
 
 @import 'page-comments/comments.scss';
+
+@import 'page-aboutUs/aboutUs.scss';
+
+@import 'page-information/auctionSheet.scss';
+@import 'page-information/constructor.scss';
+@import 'page-information/question.scss';
+
+@import 'page-services/services.scss';
+
+
+
 

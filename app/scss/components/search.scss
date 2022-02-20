@@ -10,6 +10,9 @@
 
   &__form {
     position: relative;
+  }
+  &__extended-wrap {
+    width: 100%;
     overflow: hidden;
   }
 
@@ -28,7 +31,11 @@
     margin: 0 32px 0 26px;
 
     @include r($sm) {
-      margin: 0 0 24px 26px;
+      padding: 12px 0;
+    }
+
+    @include r($sm) {
+      margin: 0 0 0 26px;
     }
   }
 
@@ -60,10 +67,6 @@
     align-items: end;
     margin-bottom: 24px;
     flex-wrap: wrap;
-
-    // @include r($xxl) {
-    //   display: block;
-    // }
   }
 
   &__filters {
@@ -305,7 +308,6 @@
 
     &--active {
       overflow: auto;
-      width: 100%;
       height: auto;
       position: relative;
       transform: translateY(0);
@@ -365,7 +367,6 @@
 
   &__range-slider {
     font-weight: 400;
-    display: block;
     font-size: 13px;
     margin-bottom: 16px;
     text-align: center;

@@ -1,0 +1,69 @@
+.auctionSheet {
+  padding: 20px 0 75px;
+
+  @include r($sm) {
+    padding: 20px 0 50px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    margin-bottom: 50px;
+
+    p {
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 25px;
+      font-weight: 400;
+    }
+
+    a {
+      color: blue;
+      transition: all 0.5s;
+
+      &:hover {
+        color: $red;
+      }
+    }
+
+    @include r($md) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__image {
+    margin-bottom: 50px;
+
+    img {
+      width: 100%;
+      height: 100vh;
+      object-fit: contain;
+      margin: 0;
+    }
+
+    figcaption {
+      padding: 10px;
+      background-color: $red;
+      color: $white;
+      max-width: 500px;
+      width: 100%;
+      text-align: center;
+      font-size: 24px;
+      font-weight: 700;
+      margin: 0 auto;
+      border-radius: 4px;
+    }
+
+    @include r($lg) {
+      img {
+        height: auto;
+      }
+
+      figcaption {
+        font-size: 20px;
+      }
+    }
+  }
+}

@@ -20,7 +20,19 @@ body {
       z-index: 50;
     }
   }
+}
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .wrapper {
@@ -73,7 +85,9 @@ body {
   }
 }
 
-.button {
+.link {
+  display: block;
+  text-align: center;
   background-color: #F4F4F4;
   border-radius: 4px;
   width: 100%;
@@ -83,6 +97,16 @@ body {
   @include r($sm){
     font-size: 17px;
     padding: 16px;
+  }
+
+  &:hover {
+    color: $white;
+    background-color: $red;
+  }
+
+  &:active {
+    background-color: #f7a4a4;
+    color: blue;
   }
 }
 

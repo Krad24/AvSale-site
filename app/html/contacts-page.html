@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="ru">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.min.css">
-  <title>Главная страница</title>
-</head>
+@include('./components/head.html')
 
 <body class="body">
   <div class="wrapper">
@@ -27,7 +19,7 @@
                   <li class="breadcrumbs__item">
                     <a class="breadcrumbs__link" href="index.html">Главная</a>
                   </li>
-                  <li class="breadcrumbs__item"></a>
+                  <li class="breadcrumbs__item">
                     <span class="breadcrumbs__span">Контакты</span>
                   </li>
                 </ul>
@@ -38,7 +30,7 @@
               <div class="container">
                 <h2 class="head-title contacts-page__title">Контакты</h2>
                 <address class="contact">
-                  <span class="contact__address">Владивосток, ул. Фадеева, д. 47 строение 1</span>
+                  <span class="contact__address">Харьков, ул. Фадеева, д. 47 строение 1</span>
                   <div class="contact__box">
                     <ul class="contact__list">
                       <li class="contact__item">
@@ -67,7 +59,7 @@
                           </a>
                         </li>
                       </ul>
-                      <a class="communication__email" href="mailto:spec@tosei.ru">spec@tosei.ru</a>
+                      <a class="communication__email" href="mailto:avsale@gmail.com">avsale@gmail.com</a>
                     </div>
                   </div>
                 </address>
@@ -86,7 +78,7 @@
                     <label class="feedback__lable" for="name">Ваше имя</label>
                     <input class="feedback__input" type="text" name="name" placeholder="Ввести" required>
                     <label class="feedback__lable" for="phone">Контактный телефон</label>
-                    <input class="feedback__input" type="tel" name="phone" placeholder="+7" required>
+                    <input class="feedback__input" type="tel" name="phone" placeholder="+38" required>
                     <label class="feedback__lable" for="text">Ваше сообщение</label>
                     <textarea class="write-us__textarea" name="text" required></textarea>
                     <button class="feedback__btn write-us__btn" type="submit">Отправить</button>
@@ -104,9 +96,6 @@
       </div>
     </div>
   </div>
-
-  <!-- <script async src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap">
-  </script> -->
   <script src="js/main.min.js"></script>
 </body>
 

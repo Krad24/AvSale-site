@@ -18,7 +18,10 @@ const gulpCheerio = require('gulp-cheerio');
 
 
 const htmlInclude = () => {
-    return src(['app/html/*.html'])
+    return src([
+        'app/html/*.html',
+        'app/html/information/*.html',
+    ])
     .pipe(fileInclude ({
         prefix: '@',
         basepath: '@file',

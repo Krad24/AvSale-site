@@ -1,0 +1,67 @@
+.aboutUs {
+  padding: 20px 0 80px;
+  font-size: 16px;
+  line-height: 1.5;
+
+  @include r($md) {
+    padding: 20px 0 60px;
+  }
+
+  @include r($md) {
+    padding: 20px 0 40px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    margin-bottom: 25px;
+    font-weight: 400;
+  }
+
+  &__subtitle {
+    font-size: 19px;
+    margin-bottom: 25px;
+
+    @include r($sm){
+      font-size: 18px;
+    }
+  }
+
+  &__list {
+    margin-bottom: 20px;
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 15px;
+    font-weight: 400;
+
+    &::before {
+      @include pseudo;
+      left: 0;
+      top: 8px;
+      width: 10px;
+      height: 10px;
+      background-color: #cc1717;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__item-span {
+    margin-right: 5px;
+    font-weight: 600;
+  }
+
+  &__items-item {
+    font-weight: 400;
+
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+  } 
+}

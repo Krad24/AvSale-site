@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="ru">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.min.css">
-  <title>Главная страница</title>
-</head>
+@include('./components/head.html')
 
 <body class="body">
   <div class="wrapper">
@@ -30,7 +22,7 @@
                   <li class="breadcrumbs__item">
                     <a class="breadcrumbs__link" href="catalog-page.html">Каталог техники</a>
                   </li>
-                  <li class="breadcrumbs__item"></a>
+                  <li class="breadcrumbs__item">
                     <span class="breadcrumbs__span">Mazda CX-3 2017</span>
                   </li>
                 </ul>
@@ -158,8 +150,8 @@
                   </div>
                   <div class="product__right">
                     <div class="product__price">
-                      <span class="product__price-text">Стоимость во Владивостоке</span>
-                      <span class="product__price-num">1 630 000 ₽</span>
+                      <span class="product__price-text">Стоимость во Харькове</span>
+                      <span class="product__price-num">1 630 000 грн</span>
                       <span class="product__price-desc">Цена указана с учетом НДС</span>
                     </div>
                     <button class="product__consultation" type="button">Консультация бесплатно</button>
@@ -194,8 +186,8 @@
                               </div>
                             </div>
                             <div class="catalog__price">
-                              <span class="catalog__desc">Стоимость во Владивостоке</span>
-                              <span class="catalog__num">630 000<span>₽</span></span>
+                              <span class="catalog__desc">Стоимость во Харькове</span>
+                              <span class="catalog__num">630 000<span>грн</span></span>
                               <span class="status status--in">В наличии</span>
                             </div>
                           </div>
@@ -225,7 +217,7 @@
                             </div>
                             <div class="catalog__price">
                               <span class="catalog__desc">Стоимость в Японии</span>
-                              <span class="catalog__num">275 000<span>₽</span></span>
+                              <span class="catalog__num">275 000<span>грн</span></span>
                               <span class="status status--order">Под заказ</span>
                             </div>
                           </div>
@@ -255,7 +247,7 @@
                             </div>
                             <div class="catalog__price">
                               <span class="catalog__desc">Стоимость в Японии</span>
-                              <span class="catalog__num">310 000<span>₽</span></span>
+                              <span class="catalog__num">310 000<span>грн</span></span>
                               <span class="status status--in">В наличии</span>
                             </div>
                           </div>
@@ -264,7 +256,7 @@
                     </article>
                   </li>
                 </ul>
-                <button class="button" type="button">Показать ещё</button>
+                <a class="link" href="catalog-page.html">Показать ещё</a>
               </div>
             </section>
 
@@ -276,9 +268,6 @@
       </div>
     </div>
   </div>
-
-  <!-- <script async src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap">
-  </script> -->
   <script src="js/main.min.js"></script>
 </body>
 

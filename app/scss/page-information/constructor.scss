@@ -1,0 +1,46 @@
+.constructor {
+  padding: 20px 0 60px;
+
+  @include r($sm) {
+    padding: 20px 0 40px;
+}
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    p {
+      font-size: 16px;
+      margin-bottom: 25px;
+      line-height: 1.5;
+      font-weight: 400;
+    }
+
+    a {
+      color: blue;
+      transition: all 0.5s;
+
+      &:hover {
+        color: $red;
+      }
+    }
+
+    @include r($md) {
+      p {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__subtitle {
+    font-size: 24px;
+    margin-bottom: 25px;
+    line-height: 1.5;
+    color: $red;
+
+    @include r($sm) {
+      font-size: 20px;
+    }
+  }
+}
