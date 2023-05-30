@@ -15,16 +15,20 @@ const ttf2woff = require('gulp-ttf2woff');
 const ttf2woff2 = require('gulp-ttf2woff2');
 const fonter = require('gulp-fonter');
 const gulpCheerio = require('gulp-cheerio');
-
+const avif = require('gulp-avif');
+const webp = require('gulp-webp');
+const newer = require('gulp-newer')
+const pictureHtml = require('gulp-webp-avif-html-nosvg-nogif-lazyload');
 
 const htmlInclude = () => {
-    return src([
-        'app/html/*.html',
-        'app/html/information/*.html',
-    ])
+    return src(['app/html/*.html'])
     .pipe(fileInclude ({
         prefix: '@',
         basepath: '@file',
+    }))
+    .pipe(pictureHtml({
+        primaryFormat: 'avif',
+        secondaryFormat: 'webp',
     }))
     .pipe(dest('app'))
     .pipe(browserSync.stream());
@@ -93,21 +97,21 @@ function scripts() {
 }
 
 
-function images(){
-    return src('app/images/**/*.*')
-    .pipe(imagemin([
-        imagemin.gifsicle({interlaced: true}),
-        imagemin.mozjpeg({quality: 75, progressive: true}),
-        imagemin.optipng({optimizationLevel: 5}),
-        imagemin.svgo({
-            plugins: [
-                {removeViewBox: true},
-                {cleanupIDs: false}
-            ]
-        })
-    ]))
-    .pipe(dest('dist/images'))
-}
+function images() {
+    return src(['app/images/**/*.png', 'app/images/**/*.jpg'])
+      .pipe(newer('app/images'))
+      .pipe(avif({ quality: 50 }))
+  
+      .pipe(src('app/images/**/*.*'))
+      .pipe(newer('app/images'))
+      .pipe(webp())
+  
+      .pipe(src(['app/images/**/*.*', '!app/images/sprite.svg', '!app/images/icon-svg/*.svg']))
+      .pipe(newer('app/images'))
+      .pipe(imagemin())
+  
+      .pipe(dest('app/images'))
+} 
 
 function fonts() {
     src('app/fonts/*.ttf')
@@ -136,7 +140,8 @@ function build(){
     return src([
         'app/*.html',
         'app/css/*.css',
-        'app/js/*.js',
+        'app/images/**/*.*',
+        'app/js/*.min.js',
         'app/fonts/*.*',
     ], {base: 'app'})
     .pipe(dest('dist'))
@@ -173,4 +178,4 @@ exports.cleanDist = cleanDist;
 exports.cleanFonts = cleanFonts;
 exports.convertFonts = series(otfTottf, fonts, cleanFonts);
 exports.build = series(cleanDist, images, build);
-exports.default = parallel(styles, scripts, svgSprites, htmlInclude, browsersync, watching);
+exports.default = parallel(styles, scripts, images, svgSprites, htmlInclude, browsersync, watching);

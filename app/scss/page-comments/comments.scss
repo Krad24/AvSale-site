@@ -163,20 +163,25 @@
     }
   }
 
-  &__lable {
+  &__inner {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+
+    @include r($sm) {
+      display: block;
+    }
+  }
+
+  &__name {
     display: block;
     font-size: 16px;
     font-weight: 700;
-    margin-bottom: 24px;
+    margin-bottom: 8px;
+    color: $default;
 
     &--rating {
-      display: flex;
-      align-items: center;
-      margin-bottom: 24px;
-
-      @include r($sm) {
-        display: block;
-      }
+      margin-bottom: 0;
     }
   }
 
@@ -190,7 +195,7 @@
   }
 
   &__textarea {
-    margin-top: 8px;
+    margin-bottom: 24px;
     display: block;
     width: 100%;
     height: 120px;

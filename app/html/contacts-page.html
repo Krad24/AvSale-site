@@ -68,7 +68,11 @@
 
             <section class="feedback write-us">
               <picture class="feedback__picture">
+                <source srcset="images/bg/map-page.avif" type="image/avif" media="(min-width: 993px)">
+                <source srcset="images/bg/map-page.webp" type="image/webp" media="(min-width: 993px)">
                 <source srcset="images/bg/map-page.jpg" media="(min-width: 993px)">
+                <source srcset="images/bg/map-mini-page.avif" type="image/avif">
+                <source srcset="images/bg/map-mini-page.webp" type="image/webp">
                 <img class="feedback__map write-us__map" src="images/bg/map-mini-page.jpg" alt="Карта" width="1080" height="595">
               </picture>
               <div class="feedback__inner write-us__inner">
@@ -76,11 +80,11 @@
                   <form class="feedback__form">
                     <h2 class="title feedback__title">Написать нам</h2>
                     <label class="feedback__lable" for="name">Ваше имя</label>
-                    <input class="feedback__input" type="text" name="name" placeholder="Ввести" required>
+                    <input class="feedback__input" type="text" name="name" id="name" placeholder="Ввести" required>
                     <label class="feedback__lable" for="phone">Контактный телефон</label>
-                    <input class="feedback__input" type="tel" name="phone" placeholder="+38" required>
+                    <input class="feedback__input" type="tel" name="phone" id="phone" placeholder="+38" required>
                     <label class="feedback__lable" for="text">Ваше сообщение</label>
-                    <textarea class="write-us__textarea" name="text" required></textarea>
+                    <textarea class="write-us__textarea" name="text" id="text" required></textarea>
                     <button class="feedback__btn write-us__btn" type="submit">Отправить</button>
                   </form>
                 </div>
